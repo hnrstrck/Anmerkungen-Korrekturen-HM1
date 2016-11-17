@@ -1,0 +1,265 @@
+% Hinweise zur Korrektur der HM1-Abgaben
+% **************************************
+%
+%
+% Autor:	Heiner Stroick
+%
+% Dieses Dokument steht unter einer 
+% 			Namensnennung -- Nicht-kommerziell -- Weitergabe unter gleichen Bedingungen 4.0 International
+% Lizenz.
+%
+% Die Bedingungen der Lizenz können unter folgendem Link eingesehen werden: 
+% 			http://creativecommons.org/licenses/by-nc-sa/4.0/deed.de
+%
+%
+
+\documentclass[11pt, a4paper]{article}
+\usepackage[dvips, bottom=3cm, top=3cm, right=3cm, left=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{MnSymbol,wasysym}
+\usepackage{mdframed}
+\newcommand{\RM}[1]{\MakeUppercase{\romannumeral #1{}}}
+
+\usepackage[colorlinks=false,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black] {hyperref}
+\hypersetup{
+pdftitle = Hinweise zur Korrektur der HM1-Abgaben,
+pdfsubject = Mathematik TU Dortmund Höhere Mathematik,
+pdfauthor = Heiner Stroick,
+}
+\usepackage{eurosym}
+\usepackage{setspace}
+\usepackage{MnSymbol,wasysym}
+
+\setstretch{1.2} 
+\setlength\parindent{0pt}
+
+\newcommand{\Lsg}{\mathbb{L}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Var}{\operatorname{Var}} 
+\newcommand{\E}{\mathbb{E}} 
+\newcommand{\Omicron}{\mathcal{O}}
+\newcommand\rsetminus{\mathbin{\mathpalette\rsetminusaux\relax}}
+\newcommand\rsetminusaux[2]{\mspace{-4mu}
+  \raisebox{\rsmraise{#1}\depth}{\rotatebox[origin=c]{-20}{$#1\smallsetminus$}}
+ \mspace{-4mu}
+}
+\newcommand\rsmraise[1]{%
+  \ifx#1\displaystyle .8\else
+    \ifx#1\textstyle .8\else
+      \ifx#1\scriptstyle .6\else
+        .45%
+      \fi
+    \fi
+  \fi}
+\title{Hinweise zur Korrektur der HM\RM{1}-Abgaben WS2016 / 2017}
+\author{Heiner Stroick, \href{mailto:heiner.stroick@tu-dortmund.de}{heiner.stroick@tu-dortmund.de}}
+\date{Stand: \today}
+
+\begin{document}
+\maketitle
+
+\begin{mdframed}[linecolor=red]
+\begin{center}
+{\footnotesize \textbf{Hinweis:} 
+
+Dies ist kein offizielles Dokument und nicht mit der HM-Orga oder den Dozenten der Vorlesung abgesprochen. Es wird auch nicht von offizieller Seite gegengelesen.\\
+~\\
+\textcolor[rgb]{1,0,0}{\textbf{Kein Anspruch auf Vollständigkeit und / oder Korrektheit.}}\\
+~\\
+\textcolor[rgb]{0,0,1}{Fehler gefunden? Bitte per Mail melden!}}
+\end{center}
+\end{mdframed}
+
+
+\section*{Blatt 2}
+\begin{itemize}
+
+\item Ihr sollt beim Auswerten der Summen die Summenformeln benutzen. In der Klausur habt ihr keinen Taschenrechner und auch keine Zeit, jeden Summanden aufzuschreiben und diese dann buchstäblich von Hand zu addieren. 
+
+\item Die wichtigsten Summenformeln solltet ihr auswendig kennen (oder zumindest zur eigenen Sicherheit auf dem Zettel stehen haben). Wenn die Summenformeln zwar auf dem Zettel sind, ihr aber nicht wisst, dass es sie gibt, habt ihr leider auch nichts davon.
+
+\item Bei der geometrischen Summenformel darauf achten, dass die Summation bei $k = 0$ beginnt.
+
+\item Fehler bei der Klammersetzung. Achtet darauf, das ist wichtig. Es gilt:
+\begin{equation*}
+\sum_{k=0}^n (k+1)^2 \quad \neq \quad \sum_{k=0}^n k^2 + 2k + 1
+\end{equation*}
+
+\item  Potenzgesetze sollten euch klar sein.
+
+\item konzentrierter Arbeiten: Viele Abschreibfehler, offene Klammern wurden nicht geschlossen, Indizes hießen mal $k$ und mal $l$, manchmal hatten Summen gar kein Argument.
+
+\item Äquivalenzzeichen machen, wenn ihr Gleichungen umformt. 
+
+\end{itemize}
+
+
+
+\newpage
+\section*{Blatt 3}
+\begin{itemize}
+\item Bei Nachweisen wie der Gleichheit in der 1) a) betrachtet man entweder zunächst nur die linke Seite und danach nur die rechte Seite (und stellt dann fest, dass sich beide Ausdrücke in denselben umformen lasen) oder leitet den einen aus dem anderen her.
+
+\item Beim bin. Lehrsatz auf den richtigen Exponenten bei $(x + y)^n$ achten.
+
+\item Die Ausdrücke $(1 + \pi)^9$ und $(2 + a)^7$ waren laut ML auszuschreiben. Achtet auf die Vorfaktoren, die sich aus dem Binomialkoeffizienten ergeben. Ich habe das nicht als Fehler gewertet, wurden die Ausdrücke nicht ausgeschrieben. Ein \enquote{Endergebnis} (eine Zahl) ist nicht interessant, ihr habt in der Klausur auch keinen Taschenrechner.
+
+\item Bei der 2) a) haben einige von euch die Fakultäten sehr umständlich umgeformt. Die Bedeutung von $n!$ ist wichtig und muss euch bekannt sein. Ebenfalls müsst ihr Fakultäten kürzen können: Oft ist es einfacher, Faktoren aus $(n+3)!$ rauszuziehen, um es mit $n!$ zu kürzen, als $n!$ zu erweitern, um $(n+3)!$ komplett zu kürzen (auch weniger Fehleranfällig, da evtl. nicht mit einem Kehrwert multipliziert werden muss). Ihr solltet beide Wege beherrschen: Fakultäten ">vergrößern"< (wie kann ich $(n-4)!$ in $n!$ umformen?) und ">verkleinern"< (wie kann ich $(n+4)!$ in $n!$ umformen?).
+
+\item Wichtig: Klammersetzung bei Fakultäten:
+\begin{align*}
+(4n)! \quad &\neq \quad 4n!\\
+(2n + 1)!\quad &\neq \quad 2n + 1!
+\end{align*}
+Macht euch das an Beispielen klar.
+
+\item Thema Induktion: Die Induktion besteht aus drei Grundbausteinen: Ind.-Anfang (IA), Ind.-Voraussetzung (IV) und Ind.-Schritt / Ind.-Schluss (IS). Die Ind.-Behauptung (IB) ist nur eine Hilfestellung und darf nicht mit dem (IS) verwechselt oder vermischt werden.
+
+\item Zur 4) a): Legt Wert auf den (IA): Wenn ihr solch eine Summe beweisen sollt, setzt $n = 1$ und schreibt die Summe zunächst noch einmal auf. Achtung: Das Argument der Summe hängt nach wie vor von k ab:
+\begin{equation*}
+\sum_{k=1}^1 k^2
+\end{equation*}
+Erst dann rechnet ihr die Summe aus. Dann betrachtet ihr in einer \emph{anderen} Rechnung die rechte Seite des zu beweisenden Ausdrucks (ihr könnt am Anfang nicht einfach ein \enquote{$=$} dazwischen schreiben -- ihr wisst ja nicht, ob es wirklich gleich ist. Eine Möglichkeit wäre, ein Fragezeichen über das Gleichheitszeichen zu schreiben.). Wenn bei beidem dasselbe raus kommt, ist der (IA) gezeigt (">Linke Seite = Rechte Seite"<). Ein \enquote{$1 = 1$} ist zu kurz.
+
+\item Auf Klammersetzung bei der (IB) achten: $n$ durch $(n+1)$ (Klammern!) ersetzen. 
+
+\item Es muss beim (IS) $n \rightsquigarrow n + 1$ heißen und nicht $n \longrightarrow n + 1$,$n \longmapsto n + 1$ , $n = n + 1$ oder $n \implies n + 1$.
+
+\item Ihr solltet auch Terme wie $(2n + 1)$ ausklammern können (oder eine Idee haben wie das geht: Polynomdivision).
+
+\item Eine (IV) wie \enquote{Die Aussage gelte.} ist zu ungenau (und falsch). Die Variante \enquote{Die Aussage gelte für $n \in \N$} ist falsch (dann setzt ihr voraus, dass die Aussage für alle $n$ gilt -- dann wäre der ganze Beweis nicht mehr nötig.) 
+
+\item Bei der 4) b) muss im (IA) auch zunächst ein $k$ im Argument stehen:
+\begin{equation*}
+\prod_{k=2}^2 \frac{k^2}{k^2 - 1}
+\end{equation*}
+Der Ausdruck
+\begin{equation*}
+\prod_{k=2}^2 \frac{2^2}{2^2 - 1}
+\end{equation*}
+ist falsch (siehe Erläuterungen zur Summe oben).
+
+\item Terme wie $(n+1)^2$ würde ich so spät wie möglich ausschreiben. Guckt erstmal, ob man kürzen kann.
+
+\item Bei der 4) c) solltet ihr die ">Teilbarkeit"< noch einmal mathematisch aufschreiben. Die (IV) lautet dabei: \enquote{Der Ausdruck $2^{2n+1}+1$ sei \textbf{für ein} $n \in \N$ durch 3 teilbar, d.h. es gibt zu diesem $n$ eine Zahl $m \in \N$ mit $2^{2n+1}+1 = 3m$.} Macht euch klar, dass das $m$ von $n$ abhängt. 
+
+\item Die (IB) als Hilfestellung für den Beweis sieht so aus: \enquote{Zu zeigen ist, dass der Ausdruck $2^{2(n+1)+1}+1$ für $n \in \N$ durch 3 teilbar ist, d.h. es gibt zu diesem $n$ eine Zahl $\overline{m} \in \N$ mit $2^{2(n+1)+1}+1 = 3\overline{m}$.}. Macht euch klar, dass das $\overline{m}$ von $n$ abhängt. 
+
+\item Gebt beim (IA) und am Ende des (IS) $m$ und $\overline{m}$ an.
+
+\item Auf Klammersetzung beim Einsetzen der (IV) achten. Wenn ihr in einer Induktion die (IV) nicht gebraucht, habt ihr etwas falsch gemacht.
+
+\item Weiterhin gilt: Auf Äquivalenzzeichen achten, diese bedeuten nicht dasselbe wie Gleichheitszeichen. Macht euch den Unterschied klar und wann man was verwendet.
+
+\item Schreibt zu Beginn einer Rechnung die Aufgabe (nicht die Aufgabenstellung \smiley{}) ab. Eine Rechnung mit \enquote{$= \dots$} zu beginnen und dann schon den ersten Umformungsschritt durchgeführt zu haben, ist nicht so schön.
+
+\item Es heißt $n \in \N$, nicht $n ~\varepsilon~ \N$ und auch nicht $n$ \euro ~$\N$.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section*{Blatt 4}
+\begin{itemize}
+\item Zur Erklärung: \enquote{Not.} = Notation (etwas ist falsch und / oder unsauber aufgeschrieben -- meist bei der Angabe der Lösungsmenge).
+
+\item Zur Erklärung: $\Lsg =~?$, $\D =~?$ meint, dass die Angabe der Lösungsmenge / Definitionsbereich fehlt.
+
+\item Zur Erklärung: \enquote{FU} meint \emph{Fallunterscheidung} (meist falsch gemacht, nicht konsistent mit den anderen oder kritische Stellen vergessen).
+
+\item Es muss $\Lsg = $~\texttt{MENGE} heißen, z.B. $\Lsg = [0, 6)$. Intervalle sind auch Mengen. Viele vergessen das \enquote{=} oder schreiben nur $\Lsg = \left\{\frac{3}{2}\right\}$ (was prinzipiell richtig wäre, aber dann meist die Fallvoraussetzung vergessen wurde -- z.B. $x < 4$. $\Lsg =\left(\frac{3}{2}, 4\right)$ wäre dann richtig).
+
+\item Die Lösungsmenge 
+\begin{align*}
+\Lsg =\left\{\frac{3}{2} < x < 4\right\}
+\end{align*}
+ist etwas ungenau, weil da nicht zu erkennen ist, aus welchem Zahlenbereich ($\Z, \N, \R$) das $x$ ist. Besser ist: 
+\begin{align*}
+\Lsg =\left\{x \in \R \mid \frac{3}{2} < x < 4\right\}
+\end{align*}
+Oder kürzer (geht nur im reellen!):
+\begin{align*}
+\Lsg =\left(\frac{3}{2}, 4\right)
+\end{align*}
+
+\item Die Zeichen $\cap$ und $\cup$ sind Zeichen, die zwischen \emph{Mengen} stehen (Schnitt, Vereinigung). 
+
+\textbf{Nicht verwechseln:} Die Zeichen $\land$ und $\lor$ (UND, ODER) stehen zwischen \emph{Aussagen}. Gleichungen oder Ungleichungen sind \emph{Aussagen}. Lösungsmengen sind \emph{Mengen} und keine Aussagen. Tipp zum Merken: $\lor$ vommt von lat. \enquote{\textbf{v}el} (\enquote{oder}), $\land$ meint dann eben \enquote{und}.
+
+\item Achtet bei Fallunterscheidungen darauf, wirklich den kompletten Definitionsbereich abzudecken. Wenn ihr mit den Zeichen $<$ und $>$ unsauber umgeht, vergesst ihr Werte (eben die \enquote{Sprungstellen}). Oder ihr nehmt Werte dazu, wo eigentlich Definitionslücken sind.
+
+\item Verwechslungsgefahr: Ihr dürft im Betrag etwas negatives oder 0 haben. Das heißt, eine vorherige Untersuchung, wo z.B. für $|5x - 6| > 0$ das Argument des Betrages (eben $5x - 6$) Null wird, ist nicht nötig. 
+
+Also: Der Definitionsbereich ist hier $\R$, insbesondere $x = \frac{6}{5}$. (Der Wertebereich bzw. die Lösungsmenge sieht natürlich anders aus und ist nicht notwendigerweise immer $\R$; hier auch nicht.) 
+
+\item Wenn ihr aus einem Intervall einzelne Werte ausschließen wollt, sieht die korrekte Notation dafür so aus:
+\begin{align*}
+\Lsg &= (-3,7) \rsetminus \{2\}
+\end{align*}
+Auch okay ist:
+\begin{align*}
+ \Lsg  = (-3,2) \cup (2,7)
+\end{align*}
+Etwas wie 
+\begin{align*}
+\Lsg &= (-3,7) \rsetminus 2
+\end{align*}
+ist mathematisch falsch notiert. Der Operator \enquote{$\rsetminus$} (SETMINUS) steht \emph{stets zwischen Mengen}, und $2$ ist keine Menge, $\{2\}$ aber schon. 
+
+\item Aussagen wie
+\begin{align*}
+ 2 < 2
+\end{align*}
+sind falsche Aussagen. Es gilt nämlich nur $2 \leq 2$.
+
+Dies kommt bei 1) e) zum Tragen:
+\begin{align*}
+ 0 > -x^2
+\end{align*}
+ist äquivalent zu $x \neq 0$, da $0 < 0$ falsch ist und sonst das Quadrat einer reellen Zahl immer positiv ist.
+
+\item Es ist $\emptyset \neq \{\emptyset\}$.
+
+\item In der Klausur habt ihr \textbf{keinen Taschenrechner}. Rechnet mit Brüchen und Wurzeln. Zahlen wie $\frac{1}{9} - \sqrt{\frac{4}{7}-6}$ sind völlig okay und muss auch nicht weiter zusammengefasst werden (Zweierpotenzen bis $2^{10} = 1024$ sollte man auswendig wissen\dots).
+\end{itemize}
+
+
+
+
+
+
+
+
+%Lizenz
+\newpage
+~
+\vfill
+{\footnotesize
+\subsection*{Lizenz}
+Dieses Dokument steht unter einer ">Namensnennung -- Nicht-kommerziell -- Weitergabe unter gleichen Bedingungen 4.0 International"<-Lizenz.\\
+
+\noindent
+Die Bedingungen der Lizenz können unter folgendem Link eingesehen werden: 
+
+\noindent
+\url{http://creativecommons.org/licenses/by-nc-sa/4.0/deed.de}}
+\end{document}
