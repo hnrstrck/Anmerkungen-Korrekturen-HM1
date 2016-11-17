@@ -2,7 +2,7 @@
 
 ## Anmerkungen zu den Abgaben der HM1-Vorlesung der TU Dortmund (WS 2016 / 2017)
 
-Das PDF sowie die tex-Datei kann oben heruntergeladen werden. Nach jeder Abgabe werden die Dateien aktualisiert.
+Das PDF sowie die tex-Datei kann oben heruntergeladen werden. Nach jeder Abgabe werden die Dateien aktualisiert, manchmal auch zwischendurch, um Fehler zu berichtigen oder Kleinigkeiten zu ergänzen.
 
 ### Fehler gefunden?
 
