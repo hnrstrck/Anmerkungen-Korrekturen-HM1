@@ -16,5 +16,13 @@ Dies ist kein offizielles Dokument und nicht mit der HM-Orga oder den Dozenten d
 
 Autor(en): Heiner Stroick
 
+
+
+
+
+
+
+
+
 #### Lizenz
 Dieses Dokument steht unter einer *Namensnennung -- Nicht-kommerziell -- Weitergabe unter gleichen Bedingungen 4.0 International*-Lizenz. Die Bedingungen der Lizenz können unter folgendem Link eingesehen werden: [http://creativecommons.org/licenses/by-nc-sa/4.0/deed.de](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.de)
