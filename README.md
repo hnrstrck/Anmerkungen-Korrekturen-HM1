@@ -11,7 +11,7 @@ Bitte per Mail melden. Adresse: `heiner PUNKT stroick AT tu MINUS dortmund PUNKT
 ## Wichtiger Hinweis
 Dies ist kein offizielles Dokument und nicht mit der HM-Orga oder den Dozenten der Vorlesung abgesprochen. Es wird auch nicht von offizieller Seite gegengelesen.
 
-<div align="center">*Kein Anspruch auf Vollständigkeit und / oder Korrektheit!*</div>
+<div align="center"><b>Kein Anspruch auf Vollständigkeit und / oder Korrektheit!</b></div>
 
 
 Autor(en): Heiner Stroick
