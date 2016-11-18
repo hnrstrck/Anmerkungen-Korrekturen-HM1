@@ -1,4 +1,4 @@
-# Anmerkungen-Korrekturen-HM1
+# Anmerkungen zu den Korrekturen in HM1
 
 ## Anmerkungen zu den Abgaben der HM1-Vorlesung der TU Dortmund (WS 2016 / 2017)
 
