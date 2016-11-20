@@ -25,17 +25,16 @@
 \usepackage{amsmath}
 \usepackage{MnSymbol,wasysym}
 \usepackage{mdframed}
-\newcommand{\RM}[1]{\MakeUppercase{\romannumeral #1{}}}
-
+\usepackage{eurosym}
+\usepackage{setspace}
+\usepackage{MnSymbol,wasysym}
 \usepackage[colorlinks=false,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black] {hyperref}
+
 \hypersetup{
 pdftitle = Hinweise zur Korrektur der HM1-Abgaben,
 pdfsubject = Mathematik TU Dortmund Höhere Mathematik,
 pdfauthor = Heiner Stroick,
 }
-\usepackage{eurosym}
-\usepackage{setspace}
-\usepackage{MnSymbol,wasysym}
 
 \setstretch{1.2} 
 \setlength\parindent{0pt}
@@ -49,22 +48,14 @@ pdfauthor = Heiner Stroick,
 \newcommand{\Var}{\operatorname{Var}} 
 \newcommand{\E}{\mathbb{E}} 
 \newcommand{\Omicron}{\mathcal{O}}
-\newcommand\rsetminus{\mathbin{\mathpalette\rsetminusaux\relax}}
-\newcommand\rsetminusaux[2]{\mspace{-4mu}
-  \raisebox{\rsmraise{#1}\depth}{\rotatebox[origin=c]{-20}{$#1\smallsetminus$}}
- \mspace{-4mu}
-}
-\newcommand\rsmraise[1]{%
-  \ifx#1\displaystyle .8\else
-    \ifx#1\textstyle .8\else
-      \ifx#1\scriptstyle .6\else
-        .45%
-      \fi
-    \fi
-  \fi}
+\newcommand{\RM}[1]{\MakeUppercase{\romannumeral #1{}}}
+
 \title{Hinweise zur Korrektur der HM\RM{1}-Abgaben WS2016 / 2017}
 \author{Heiner Stroick, \href{mailto:heiner.stroick@tu-dortmund.de}{heiner.stroick@tu-dortmund.de}}
 \date{Stand: \today}
+
+
+
 
 \begin{document}
 \maketitle
@@ -222,7 +213,7 @@ Also: Der Definitionsbereich ist hier $\R$, insbesondere $x = \frac{6}{5}$. (Der
 
 \item Wenn ihr aus einem Intervall einzelne Werte ausschließen wollt, sieht die korrekte Notation dafür so aus:
 \begin{align*}
-\Lsg &= (-3,7) \rsetminus \{2\}
+\Lsg &= (-3,7) \setminus \{2\}
 \end{align*}
 Auch okay ist:
 \begin{align*}
@@ -230,9 +221,9 @@ Auch okay ist:
 \end{align*}
 Etwas wie 
 \begin{align*}
-\Lsg &= (-3,7) \rsetminus 2
+\Lsg &= (-3,7) \setminus 2
 \end{align*}
-ist mathematisch falsch notiert. Der Operator \enquote{$\rsetminus$} (SETMINUS) steht \emph{stets zwischen Mengen}, und $2$ ist keine Menge, $\{2\}$ aber schon. 
+ist mathematisch falsch notiert. Der Operator \enquote{$\setminus$} (SETMINUS) steht \emph{stets zwischen Mengen}, und $2$ ist keine Menge, $\{2\}$ aber schon. 
 
 \item Aussagen wie
 \begin{align*}
