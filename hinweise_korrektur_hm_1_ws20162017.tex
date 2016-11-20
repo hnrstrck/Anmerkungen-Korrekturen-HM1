@@ -186,6 +186,13 @@ ist falsch (siehe Erläuterungen zur Summe oben).
 
 \item Zur Erklärung: \enquote{FU} meint \emph{Fallunterscheidung} (meist falsch gemacht, nicht konsistent mit den anderen oder kritische Stellen vergessen).
 
+\item Bei Fallunterscheidungen zu Ungleichungen ist der Ausdruckt, den ihr untersucht, im Fall $< 0$ nicht durch ein $-($\texttt{AUSDRUCK}$)$ zu ersetzten, d.h. für den Fall $x-1 < 0$ ist der Ausdruck $\frac{1}{x-1}$ in
+\begin{align*}
+\frac{1}{x-1} < 4x
+\end{align*}
+nicht durch $\frac{1}{-(x-1)}$ zu ersetzten.
+
+
 \item Es muss $\Lsg = $~\texttt{MENGE} heißen, z.B. $\Lsg = [0, 6)$. Intervalle sind auch Mengen. Viele vergessen das \enquote{=} oder schreiben nur $\Lsg = \left\{\frac{3}{2}\right\}$ (was prinzipiell richtig wäre, aber dann meist die Fallvoraussetzung vergessen wurde -- z.B. $x < 4$. $\Lsg =\left(\frac{3}{2}, 4\right)$ wäre dann richtig).
 
 \item Die Lösungsmenge 
@@ -196,20 +203,22 @@ ist etwas ungenau, weil da nicht zu erkennen ist, aus welchem Zahlenbereich ($\Z
 \begin{align*}
 \Lsg =\left\{x \in \R \mid \frac{3}{2} < x < 4\right\}
 \end{align*}
-Oder kürzer (geht nur im reellen!):
+Oder kürzer (geht nur im Reellen!):
 \begin{align*}
 \Lsg =\left(\frac{3}{2}, 4\right)
 \end{align*}
 
 \item Die Zeichen $\cap$ und $\cup$ sind Zeichen, die zwischen \emph{Mengen} stehen (Schnitt, Vereinigung). 
 
-\textbf{Nicht verwechseln:} Die Zeichen $\land$ und $\lor$ (UND, ODER) stehen zwischen \emph{Aussagen}. Gleichungen oder Ungleichungen sind \emph{Aussagen}. Lösungsmengen sind \emph{Mengen} und keine Aussagen. Tipp zum Merken: $\lor$ vommt von lat. \enquote{\textbf{v}el} (\enquote{oder}), $\land$ meint dann eben \enquote{und}.
+\textbf{Nicht verwechseln:} Die Zeichen $\land$ und $\lor$ (UND, ODER) stehen zwischen \emph{Aussagen}. Gleichungen oder Ungleichungen sind \emph{Aussagen}. Lösungsmengen sind \emph{Mengen} und keine Aussagen. 
+
+Tipp zum Merken: $\lor$ vommt von lat. \enquote{\textbf{v}el} (\enquote{oder}), $\land$ meint dann eben \enquote{und}.
 
 \item Achtet bei Fallunterscheidungen darauf, wirklich den kompletten Definitionsbereich abzudecken. Wenn ihr mit den Zeichen $<$ und $>$ unsauber umgeht, vergesst ihr Werte (eben die \enquote{Sprungstellen}). Oder ihr nehmt Werte dazu, wo eigentlich Definitionslücken sind.
 
-\item Verwechslungsgefahr: Ihr dürft im Betrag etwas negatives oder 0 haben. Das heißt, eine vorherige Untersuchung, wo z.B. für $|5x - 6| > 0$ das Argument des Betrages (eben $5x - 6$) Null wird, ist nicht nötig. 
+\item Verwechslungsgefahr: Ihr dürft im Betrag etwas negatives oder 0 haben. Das heißt, eine vorherige Untersuchung für den Definitionsbereich, wo z.B. für $|5x - 6| > 0$ das Argument des Betrages (eben $5x - 6$) Null wird, ist nicht nötig.
 
-Also: Der Definitionsbereich ist hier $\R$, insbesondere $x = \frac{6}{5}$. (Der Wertebereich bzw. die Lösungsmenge sieht natürlich anders aus und ist nicht notwendigerweise immer $\R$; hier auch nicht.) 
+Also: Der Definitionsbereich ist hier $\R$, insbesondere $x = \frac{6}{5}$. (Der Wertebereich bzw. die Lösungsmenge sieht natürlich anders aus und ist nicht notwendigerweise immer $\R$; hier auch nicht. Eine Untersuchung von $5x - 6 = 0$ kann darüber hinaus sinnvoll für die Fallunterscheidung sein.) 
 
 \item Wenn ihr aus einem Intervall einzelne Werte ausschließen wollt, sieht die korrekte Notation dafür so aus:
 \begin{align*}
@@ -237,9 +246,23 @@ Dies kommt bei 1) e) zum Tragen:
 \end{align*}
 ist äquivalent zu $x \neq 0$, da $0 < 0$ falsch ist und sonst das Quadrat einer reellen Zahl immer positiv ist.
 
-\item Es ist $\emptyset \neq \{\emptyset\}$.
+\item Es ist $\emptyset \neq \{\emptyset\}$, in der Regel meint ihr ersteres (z.B. bei der Angabe der Lösungsmenge).
 
 \item In der Klausur habt ihr \textbf{keinen Taschenrechner}. Rechnet mit Brüchen und Wurzeln. Zahlen wie $\frac{1}{9} - \sqrt{\frac{4}{7}-6}$ sind völlig okay und müssen auch nicht weiter zusammengefasst werden (Zweierpotenzen bis $2^{10} = 1024$ sollte man auswendig wissen\dots).
+
+\item Auch wenn die Angabe \emph{einer} Lösungsmenge am Ende ausreichend ist ($\Lsg_{Ges}$), solltet ihr überlegen, nach jedem Fall eine Lösungsmenge anzugeben ($\Lsg_1, \Lsg_2, \Lsg_3, \Lsg_{3.1}, \Lsg_{3.2}, \dots$). So macht ihr weniger Fehler beim Vereinigen der Lösungsmengen (s. Hinweis zur Notation oben).
+
+\item Es gilt (Intervallgrenzen beachten!)
+\begin{align*}
+(-\infty, 1) \cup (3, \infty) = \R \setminus [1, 3]
+\end{align*}
+
+\item Bei der o) (i) kann kein Intervall angegeben werden, da Punkte in der Ebene (später nennen wir das Vektoren) keine Ordnung besitzen (ähnlich wie komplexe Zahlen kann nicht gesagt werden, welcher Punkt größer ist oder kleiner ist, was aber eine zwingende Voraussetzung für Intervalle ist). Die Lösungsmenge muss anders formuliert werden:
+\begin{align*}
+\Lsg = \{ (x,y)^\intercal \in \R^2 \mid \qquad \dots \qquad \}
+\end{align*}
+
+\item Bei Intervallen steht die kleinere Zahl links des Kommas, sonst ist die durch das Intervall beschriebene Menge leer (Definition der Intervalle im Skript evtl. nochmal ansehen).
 \end{itemize}
 
 
