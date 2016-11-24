@@ -41,6 +41,7 @@ pdfauthor = Heiner Stroick,
 
 \newcommand{\Lsg}{\mathbb{L}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\D}{\mathbb{D}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -259,10 +260,72 @@ ist äquivalent zu $x \neq 0$, da $0 < 0$ falsch ist und sonst das Quadrat einer
 \begin{align*}
 \Lsg = \{ x \in \R \mid x < -1, x > 3\}
 \end{align*}
-
 \end{itemize}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section*{Blatt 5}
+\begin{itemize}
+\item Beim Zeichnen komplexer Zahlen wird die imaginäre Achse ohne $i$ skaliert. Bei solchen Skizzen solltet ihr (ungefähr) dieselbe Skalierung auf beiden Achsen verwenden (macht das Winkel-Ablesen einfacher!) -- sonst bin ich da nicht so pingelig.
+
+\item Der Imaginärteil einer komplexen Zahl wird \textbf{ohne} $i$ angegeben. Der Imaginärteil ist reell! Das ist ein grober Fehler.
+
+\item Bei der c) (i) reicht es nicht, zu erkennen, dass es da ein \enquote{Muster} gibt. Ich hätte gerne so etwas wie
+\begin{align*}
+i^n = \begin{cases}
+1, \quad &n = 4m		\quad  \text{für}\quad m \in \N\\
+i, \quad &n = 4m + 1	\quad  \text{für}\quad m \in \N\\
+-1, \quad &n = 4m + 2 	\quad  \text{für}\quad m \in \N\\
+-i, \quad &n = 4m + 3	\quad  \text{für}\quad m \in \N\\
+\end{cases}
+\end{align*}
+gelesen.
+
+\item Wenn nach dem Ausrechnen des Betrages einer Komplexen Zahl ein $i$ auftaucht, ist das ein grober Fehler. Der Betrag einer komplexen Zahl ist reell! 
+
+Guckt euch nochmal an, wie man in $\C$ den Betrag berechnet. \textbf{Insbesondere ist keine Fallunterscheidung wie im reellen nötig}.\footnote{Das ist auch allein schon deshalb nicht sinnvoll, da die komplexen Zahlen keine Ordnung besitzen. Das heißt, eine Fallunterscheidung wo $3 - 4i < 0$ ist, ist sinnlos (und nicht lösbar und falsch \smiley{}).} Den Betrag kann man einfach ausrechnen. 
+
+\item Ob man Gleichungen korrekt gelöst hat, kann man überprüfen, indem man die vermeintliche Lösung (bei $\infty$-vielen Lösungen: eine bzw. mehrere) für $z$ (die Variable) einsetzt. Geht die Gleichung auf, hat man richtig gerechnet.
+
+\item Es ist oft sinnvoll, bei Gleichungen das $z$ so spät wie möglich durch $x + iy$ oder $a + ib$ zu ersetzten.
+
+Zum Beispiel würde ich 
+\begin{align*}
+(z -2i)^2 = (z + 2i)^2
+\end{align*}
+zunächst mit $z$ ausrechnen, weil so nur zwei Summanden in der Klammer stehen (einfache bin. Formel). Ersetzt man das $z$ durch $x + iy$ am Anfang, hat man drei Summanden (das Potenzieren mit $2$ ist umfangreicher und fehleranfälliger). Auch wenn man alle Summanden mit $i$ zusammenfasst, entstehen neue bin. Formeln, die ausmultipliziert werden müssen.
+\begin{align*}
+(x + iy -2i)^2 = (x + iy + 2i)^2
+\end{align*}
+
+\item Eine Möglichkeit, Lösungsmengen in $\C$ zu notieren (hier für die Aufgabe j). Beachtet, dass es hier $\infty$-viele Lösungen gibt):
+\begin{align*}
+\Lsg = \{ z = x  + iy \in C \mid y = -\frac{3}{5}x + \frac{8}{5}\}
+\end{align*}
+
+\item Wenn ihr für die Lösung einer Gleichung \enquote{nur} zwei komplexe Zahlen raus bekommt, könnt ihr diese einfach aufzählen:
+\begin{align*}
+\Lsg_{k) (ii)} = \{ -2 + 2i, -3 + 3i\}
+\end{align*}
+
+\item Bei der k) (i) und (ii) empfiehlt sich eine Skizze. Dabei kommt man bei der (i) nach ein paar Rechenschritten auf eine Kreisgleichung -- (ii) ist dann die Schnittmenge des Kreisbogens um $-3 + 2i$ mit Radius $1$ und der Geraden, die durch $a - ai$ beschrieben wird (Winkelhalbierende des \RM{2}. und \RM{4}. Quadranten).
+
+\end{itemize}
 
 
 
