@@ -26,6 +26,7 @@
 \usepackage{MnSymbol,wasysym}
 \usepackage{mdframed}
 \usepackage{eurosym}
+\usepackage{float}
 \usepackage{setspace}
 \usepackage{MnSymbol,wasysym}
 \usepackage[colorlinks=false,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black] {hyperref}
@@ -356,6 +357,128 @@ Also: $\operatorname{Im}(-1) = 0$.
 \end{itemize}
 
 
+
+
+\newpage
+\section*{Testat 2}
+\begin{itemize}
+\item Da kaum jemand $z^8$ richtig bestimmt hat (vielleicht 5 von 60 Leuten), hier ein Lösungsvorschlag. Seht mir bitte nach, dass ich ihn nicht getext habe\dots \smiley{}
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\fbox{\includegraphics[width=1.0\textwidth]{img/testat_2_zhoch8.jpg}}
+	\caption{Bestimmen von $z^8$}
+	\label{fig:testat2_zhoch8}
+\end{figure}
+
+
+\newpage
+\section*{Blatt 6}
+\begin{itemize}
+\item Wenn eine Zahl $z = x + iy \in \C$ in Polarkoordinatendarstellung (PKD) gebracht werden soll, reicht es nicht, nur den Betrag und den Winkel zu bestimmen. Es muss abschließend noch einmal $z$ in PKD angegeben werden. (Genauso wie am Ende immer noch einmal die Angabe der Gesamtlösungsmenge erwartet wird\dots)
+
+\item Winkel werden in Bogenmaß gemessen (\texttt{RAD}). Winkel wie 360\textdegree, 180\textdegree, 90\textdegree, 60\textdegree~und 45\textdegree~sollte man in Bogenmaß kennen (oder sich eben schnell herleiten können).
+
+Das Gradmaß (\texttt{DEG}) hat in der Mathematik nichts verloren (die Festlegung vom rechten Winkel auf 90\textdegree~ist recht willkürlich. Daneben (und auch deswegen) gibt es noch andere Gradmaße, mit denen man einfacher rechnen kann, z.\,B. \texttt{GON} mit mit einem rechten Winkel von 100~$\operatorname{gon}$)
+
+\item Beim Umformen einer Zahl in PKD solltet ihr getrennt voneinander Winkel und Argument bestimmen (und dann noch einmal $z$ in PKD angeben, vgl.\,Abbildung~\ref{fig:testat2_zhoch8})
+
+
+\item Bei der 1) b) ist $z_3$ \textbf{nicht} in PKD (man beachte das Minus vor dem Sinus). 
+
+Soll hier mit $z_3$ gerechnet werden, muss das Minus zu einem Plus gemacht werden. 
+
+Dieser Weg klappt immer: $z_3$ in die Form $x + iy$ bringen und dann in PKD umformen. Dann kann man die Rechengesetze für zwei komplexe Zahlen in PKD anwenden (z.\,B. das Rechengesetz für die Multiplikation). 
+
+Geht evtl. schneller: Rechengesetze für $\sin$ und $\cos$ anwenden, um $z_3$ in PKD umzuformen. Achtung: \enquote{Beide} Winkel bei der PKD müssen gleich sein.
+
+Solch eine Aufgabe ist auch auf einem der Trainingsblätter zu den komplexen Zahlen drauf. 
+
+\item Wenn ihr im Argument von $\sin$ und $\cos$ rechnet, \textbf{setzt Klammern!} Sonst kann man nicht nachvollziehen, was ihr meint!
+\begin{align*}
+\cos \frac{3}{2}\pi - \pi 			&\stackrel{?}{=} 		\cos \left( \frac{3}{2}\pi - \pi  \right) \\
+\cos \frac{3}{2}\pi - \pi 			&\stackrel{?}{=}			\cos \left( \frac{3}{2}\pi \right) - \pi 
+\end{align*}
+
+\item Für die PKD muss der Winkel aus $[0, 2\pi)$ sein. Das bedeutet insbesondere, dass der Winkel positiv angegeben wird! Sonst handelt es sich nicht um eine Zahl in PKD.
+
+Ferner muss sowohl beim $\sin$ als auch beim $\cos$ \textbf{der gleiche Winkel} im Argument stehen.
+
+\item Die Lösungen beim Wurzelziehen werden $z_0, z_1, \dots, z_{n-1}$ durchnummeriert. Dies sind die Lösungen der Gleichung
+\begin{align*}
+z^n = w
+\end{align*}
+mit $z, w \in \C$ und $w$ konkret. 
+
+Eine Angabe von $z_n = z_0$ ist nicht erforderlich -- ich hatte das im Tutorium nur angeschrieben, damit ihr den zyklischen Aufbau versteht. 
+
+\textbf{Tipp:} Zunächst Winkel getrennt von der Aufstellung der Lösungen berechnen. So macht ihr weniger Fehler.
+
+Und gebt $w$ bitte einmal in PKD an, bevor ihr die Lösungen $z_0, z_1, \dots, z_{n-1}$ aufstellt. 
+
+
+\item Standardwerte von $\sin$ und $\cos$ \textbf{muss} man auswendig wissen. Dazu zählen die Winkel $0, \frac{\pi}{2}$ und $\pi$. Es wird erwartet, dass diese Ausdrücke ausgewertet werden!
+
+\item Macht ein ordentliches $\pi$! Bei einigen sieht das aus wie $n$, $\cap$ oder $\sqcap$.
+
+\item Wenn ihr beim Sinus Klammern setzt, müsst ihr zwei Klammern schließen (die vom Sinus und die vom ausgeklammerten Betrag). Klingt bescheuert, vergessen aber 70\% von euch.
+
+\item Rechnet \textbf{ohne} Taschenrechner. Rechnet mit Brüchen und Wurzeln usw. Tut euch den Gefallen!
+
+\item Es gilt: 
+\begin{align*}
+-64 \in \C.
+\end{align*}
+Überlegt euch, wie die PKD aussehen muss! Wo liegt die Zahl in der komplexen Ebene? 
+
+\item Die Umkehrfunktion vom $\sin$ wird als Arcus-Sinus ($\arcsin$) bezeichnet. Sie liefert zu einer Zahl den Winkel (auf dem Taschenrechner ist das die Taste \texttt{sin\textasciicircum-1} -- auf das richtige Gradmaß im Taschenrechner achten! \dots aber den dürft ihr ja eh nicht benutzen \smiley{})
+
+In der Mathematik wird die Schreibweise $\sin^{-1}(x)$ für den Arcus-Sinus nicht verwendet, weil man es nicht von $\frac{1}{\sin(x)}$ unterscheiden kann. Schreibt $\arcsin(x)$ für die Umkehrfunktion.
+
+\item Wenn nicht weiter angegeben ist, wie die Lösung einer Rechnung angegeben werden soll, ist ein Ergebnis in PKD natürlich völlig in Ordnung.
+
+\item Die \enquote{gemischte Bruchschreibweise} wird in der Mathematik nicht verwendet, da man nicht unterscheiden kann, ob $5\frac{1}{3}$ nun $5 \cdot \frac{1}{3}$ oder $5 + \frac{1}{3}$ bedeutet. 
+
+\item Nach wie vor gilt: Gebt euch Mühe beim Setzen von Äquivalenz- und Gleichheitszeichen. Und setzt das richtige Zeichen an die richtige Stelle. Arbeitet mathematisch sauber! Sonst: Punktabzug!
+
+Dazu: Wenn ihr das Zeichen $\stackrel{\wedge}{=}$ in der Mathematik verwendet, könnt ihr euch zu 90\% sicher sein, dass ihr es falsch oder unsauber notiert habt.
+
+\item Maximal könnt ihr derzeit $20 + 19 + 4\cdot 5 = 59$ Punkte erreicht haben (Testate 1, 2) und (ÜB 2--6). Von insgesamt $20 \cdot 5 + 4 \cdot 13 = 152$ Punkten sind das 38\% und schon fast die Studienleistung, die es bei 60 Punkten gibt. Das heißt: Wer derzeit ca. $\leq 15$ Punkte (25\% der Studienleistung) hat, \textbf{sollte Gas geben}! Es werden nur noch ca. 100 Punkte ausgeschüttet, von denen ihr dann 45 braucht! 
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+%\newpage
+%\section*{Blatt 7}
+%\begin{itemize}
+%\item 
+%\end{itemize}
+%
+%
+%
+%
+%\newpage
+%\section*{Blatt 8}
+%\begin{itemize}
+%\item 
+%\end{itemize}
+%
+%
+%
+%
+%\newpage
+%\section*{Probeklausur Dezember 2016}
+%\begin{itemize}
+%\item 
+%\end{itemize}
 
 
 
