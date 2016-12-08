@@ -27,15 +27,18 @@
 \usepackage{mdframed}
 \usepackage{eurosym}
 \usepackage{float}
+\usepackage{tikz}
 \usepackage{setspace}
 \usepackage{MnSymbol,wasysym}
-\usepackage[colorlinks=false,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black] {hyperref}
+\usepackage{polynom}			% Für Polynomdivision und Horner-Schema
+\usepackage[colorlinks=true,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = red,plainpages = false,hypertexnames = false,citecolor = black] {hyperref}
 
 \hypersetup{
 pdftitle = Hinweise zur Korrektur der HM1-Abgaben,
 pdfsubject = Mathematik TU Dortmund Höhere Mathematik,
 pdfauthor = Heiner Stroick,
 }
+\usepackage{footnotebackref}			
 
 \setstretch{1.2} 
 \setlength\parindent{0pt}
@@ -476,12 +479,93 @@ Klammert ihr $-64$ aus, kommt ihr auf einen Winkel von $\alpha = 0$. Ein Winkel 
 
 
 
-%\newpage
-%\section*{Blatt 7}
-%\begin{itemize}
-%\item 
-%\end{itemize}
-%
+\newpage
+\section*{Blatt 7}
+\begin{itemize}
+\item Kurzes Update: Es gilt lt. Skript $0 \in \R^{+}$ (Notation im Skript: $\R_{+}$).
+
+\item Bei Polynomdivisionen \textbf{müssen} Klammern um den Dividenden gesetzt werden.\footnote{Dividend / Divisor = Quotient} Sonst wird nur das letzte (meist absolute) Glied durch den Divisor geteilt.
+
+\item Kommt eine Nullstelle bei der $pq$-Formel oder sonstwo häufiger vor, taucht sie natürlich in der Linearfaktorzerlegung (LFZ) in entsprechender Potenz vor.
+
+\item Wenn ihr die LFZ angeben sollt, gehört ein $f(x)$ vor die LFZ. Sonst steht der Rest einfach nur im leeren Raum. 
+
+Also z.\,B.:
+\begin{align*}
+f(x) = -3(x-4)(x+5)(x-1)^7(x-1)^2
+\end{align*}
+
+\item Wenn ihr auf dem \enquote{Weg} zur LFZ z.\,B. bei einer Berechnung von der $pq$-Formel durch $2$ teilt (Aufgabe 1) a) iii)), dann dürft ihr die 2 nicht in der LFZ vergessen. Ihr hättet diese ja auch ganz (!) zu Beginn ausklammern können. Macht euch das klar.
+
+\item \textbf{Beispiele sind keine Beweise!} Wenn in Aufgaben etwas wie \enquote{Zeigen Sie, dass \dots} steht, werden Beweise verlangt.\footnote{Die zu zeigende Behauptung stimmt -- im Gegensatz zu Formulierungen wie \enquote{Gilt \dots für \dots} oder \enquote{Überprüfen Sie, ob \dots gilt}, wo der Wahrheitsgehalt der Aussage gezeigt / widerlegt werden muss.} Für die Beweise lohnt sich ein Blick ins Skript.
+
+\item Es gilt:
+\begin{align*}
+\frac{y}{2} = (x+1)^4\\
+\Leftrightarrow \sqrt[4]{\frac{y}{2}} = |x + 1|
+\end{align*}
+
+Das ist etwas anderes als
+\begin{align*}
+\sqrt[4]{\frac{y}{2}} = x + 1.
+\end{align*}
+
+\item Die Monotonie sollt ihr nicht über die 1. Ableitung zeigen. Das ist Stoff, der (noch nicht) behandelt wurde. Dies ist Stoff aus der  HM\RM{2}. Arbeitet deshalb mit der Definition im Skript. 
+
+Dazu: $|x|$ ist in 0 nicht differenzierbar (diff'bar). Das heißt, man kann keine Ableitung in $x = 0$ berechnen (u.\,a deswegen kann man die Monotonie deswegen nicht auf ganz $\R$ mit dem Ableitungskriterium zeigen). Das solltet ihr schon mal gehört haben; kommt ausführlich nächstes Semester.
+
+\item Es gilt: $f(x) = |x|$ ist auf $\R$ weder (streng) monoton fallend noch (streng) monoton fallend. Ihr müsst die Funktion \textbf{als ganzes} und nicht nur ihre Äste sehen. Und den Definitionsbereich $\R$ beachten.
+
+Dann tut eine Skizze ihr übriges:
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[domain=-4:4] 
+    \draw[very thin,color=gray] (-3.9,-0.1) grid (3.9,3.9);
+    \draw[<->] (-4.2,0) -- (4.2,0) node[right] {$x$}; 
+    \draw[->] (0,-0.1) -- (0,4.2) node[above] {$f(x)$};
+    \draw[color=red]    plot (\x,{abs(\x)})             node[right] {$f$}; 
+\end{tikzpicture}
+\end{figure}
+
+
+\item Redet ihr von Funktionen, sprecht ihr diese natürlich beim Namen an. Auch wenn man überall immer $f(x)$ ließt, heißt die Funktion $f$. $f(x)$ bezieht sich auf die $y$-Werte (meist für ein oder mehrere \textbf{konkrete} $x$-Werte ($x = 7$, $x = -\pi$, \dots).
+
+Es muss also korrekterweise heißen:
+\begin{itemize}
+\item $f$ ist streng monoton fallend (nicht $f(x)$)
+\item $f$ ist stetig (nicht $f(x)$)
+\item Der Graph von $f$ sieht aus wie \dots (nicht der Graph von $f(x)$)
+\item $f$ ist differenzierbar (nicht $f(x)$)
+\item $f$ ist bijektiv (nicht $f(x)$)
+\item Es werden die Hoch- und Tiefpunkte von $f$ bestimmt (nicht von $f(x)$
+\item $p$ hat den Grad 4 (nicht $p(x)$)\footnote{Ja, das habe ich letztes Tutorium beim Anschreiben selber nicht so angeschrieben -- mit Absicht. Ich glaube, es ist am Anfang einfacher, sich vorzustellen, dass $p(x)$ den Grad 4 hat, als dass $p$ den Grad 4 hat. $p(x)$ oder $q(x)$ erinnert mehr an ein Polynom als es vielleicht $p$ oder $q$.}
+\item usw. Es gibt vielfach mehr solche Beispiele.
+\end{itemize}
+
+\item Beim Zeigen von Gleichungen sucht ihr euch eine Seite aus und folgt dann durch einfache Termumformungen die andere Seite zu erhalten. Wenn $A = B$ zu zeigen ist, sehen die beiden Möglichen Lösungen so aus:
+\begin{align*}
+A = \dots = \dots = \dots = \dots = \dots = \dots = B
+\end{align*}
+oder
+\begin{align*}
+B = \dots = \dots = \dots = \dots = A
+\end{align*}
+
+Es kann sein, dass mal die Richtung von links nach rechts oder die von rechts nach links einfach ist als die jeweils andere. Da aber eben ein \enquote{$=$} dazwischen steht, sind beide Rechnungen gleichermaßen richtig.
+
+\item Tipp für die Klausur: Aufgabenstellung lesen. Wer keine LFZ angibt, obwohl das in der Aufgabenstellung steht, kriegt Punktabzug. Auch wenn alle Nullstellen richtig sind und von mir aus auch ordentlich alle an einer Stelle angegeben werden. 
+
+Zweiter Tipp: Lest jede Aufgabenstellung zwei mal. Und lest sie noch einmal, wenn ihr glaubt fertig zu sein, um zu checken, ob ihr nichts vergessen habt.
+
+Dazu: Wenn nach Injektivität und Surjektivität gefragt ist, müsst ihr auch beides untersuchen.
+
+\smiley{}
+
+
+
+\end{itemize}
+
 %
 %
 %
