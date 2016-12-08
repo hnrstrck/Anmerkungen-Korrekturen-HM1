@@ -1,3 +1,5 @@
+nudel.sh
+*.fdb_latexmk
 *.aux
 *.log
 *.DS_Store
