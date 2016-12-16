@@ -639,24 +639,35 @@ Ich habe das nicht so streng korrigiert, weil ihr die Stetigkeit der Funktion in
 
 \item Ihr solltet für Parameter $s$ und $t$ schreiben und nicht die Variable nutzen. Das heißt, ihr gewinnt aus einer Zeile die Information, dass  $x_3$ beliebig ist, und solltet dann $x_3 =: t$ notieren (und mit $t$ für $x_3$ weiter rechnen).
 
-\item Die Lösungsmenge wird bei $\infty$-vielen Lösungen wie im Tutorium wie folgt angegeben. Ihr geht vom groben (erst alle Vektoren $x \in \R^3$) ins Feine ($x$ soll solche Gestalt haben: \dots). Eine andere Richtung ist nicht sinnvoll.
-\begin{align*}
-\Lsg = \left\{ x \in \R^3 \mid x = \Spvek[c]{1;1;0} + t\Spvek[c]{-1;1;1}, t \in \R\right\}. 
-\end{align*}
+\item Die Lösungsmenge wird bei $\infty$-vielen Lösungen wie im Tutorium wie folgt angegeben. Ihr geht vom groben (erst alle Vektoren $x \in \R^3$) ins Feine ($x$ soll solche Gestalt haben: \dots -- das bedeutet der Strich \enquote{$\mid$}). Eine andere Richtung ist nicht sinnvoll.
+\begin{align}
+\Lsg = \left\{ x \in \R^3 \mid x = \Spvek[c]{1;1;0} + t\Spvek[c]{-1;1;1}, t \in \R\right\} \label{eq:lsg_axb_infty}. 
+\end{align}
+
+Ihr solltet die Vektoren, falls es $\infty$-viele Lösungen gibt, trennen (so wie in der Lösungsmenge (\ref{eq:lsg_axb_infty}) oben). Dann erkennt man besser, welche die Lösung (Singular!) des inhomogenen $Ax = b$ und welches die Lösungen (Plural!) des homogenen Systems $Ax = 0$ sind (den genauen Zusammenhang beider Systeme werden wir wahrscheinlich noch mal im Tutorium besprechen).
 
 Ist nur \emph{ein} Vektor in der Lösungsmenge, kann dieser einfach angegeben werden, z.\,B.:
 \begin{align*}
 \Lsg = \left\{\Spvek[c]{\frac{1}{7};1;-2}\right\}. 
 \end{align*}
 
-Nicht die Klammern um den Vektor vergessen! Und es heißt $\Lsg = \{\dots\}$, nicht $\Lsg : \{\dots\}$
+Nicht die Klammern um den Vektor vergessen! 
+
+Angaben wie 
+\begin{align*}
+\Lsg = \left\{x = \frac{1}{7}, y = 1, z = -2\right\} 
+\end{align*}
+sind nicht wirklich sinnvoll, weil nur ein \textbf{Vektor} das LGS $Ax = b$ löst.
+
+ 
+Und es heißt $\Lsg = \{\dots\}$, nicht $\Lsg : \{\dots\}$
 \item Wenn etwas wie \enquote{Ist $v \in \Lsg$?} gefragt ist, wird auch ein Antwortsatz erwartet. Ich habe dann \enquote{Aussage?} daneben geschrieben.
 
 \item Der Vektor in 2) b) ii) heißt $v$. $v^\intercal$ ist nur eine verkürzte Schreibweise eines Spaltenvektors als Zeile (damit das im Text nicht so viel Platz weg nimmt). 
 
 Also: Es wird überprüft, ob $v$ in $\Lsg$ ist, nicht ob $v^\intercal \in \Lsg$ gilt.
 
-\item Fallen bei der Vorwärtselimination Zeilen raus (weil sie identisch sind), schreibt für diese Zeile $0 = 0$ und lasst diese nicht einfach weg.\footnote{Das Weglassen wäre mathematisch nicht falsch, es ist aber leichter für die Korrektur, wenn die Zeilen stehen bleiben.} 
+\item Fallen bei der Vorwärtselimination Zeilen raus (weil sie identisch sind), schreibt für diese Zeile $0 = 0$ und lasst diese nicht einfach weg.\footnote{Das Weglassen wäre mathematisch nicht falsch, es ist aber leichter für die Korrektur, wenn die Zeilen stehen bleiben. Und es sieht nicht wie ein \enquote{neues} System aus. \smiley{}} 
 
 Beispiel:
 \begin{align*}
