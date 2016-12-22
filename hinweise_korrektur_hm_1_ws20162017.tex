@@ -552,7 +552,7 @@ Dann tut eine Skizze ihr übriges:
 \end{tikzpicture}
 \end{figure}
 
-\item Wenn man zu Beginn ein $x$ bei einem Polynom ausklammern kann, solltet ihr das tun. Dadurch werden Polynomdivision bzw.\,Horner-Schema kleiner. Macht euch das ggfs.\,klar.
+\item Wenn man zu Beginn ein $x$ bei einem Polynom ausklammern kann, solltet ihr das tun. Dadurch werden Polynomdivision bzw.\,\textsc{Horner}-Schema kleiner. Macht euch das ggfs.\,klar.
 
 \item Redet ihr von Funktionen, sprecht ihr diese natürlich beim Namen an. Auch wenn man überall immer $f(x)$ ließt, heißt die Funktion $f$. $f(x)$ bezieht sich auf die $y$-Werte (meist für ein oder mehrere \textbf{konkrete} $x$-Werte ($x = 7$, $x = -\pi$, \dots).
 
@@ -770,17 +770,17 @@ ist nicht in ZSF (auch wenn man die Lösungsmenge sehr leicht bestimmen kann: \R
 \section*{Probeklausur Dezember 2016}
 \subsection*{Aufgabe 1}
 \begin{itemize}
-\item[a)] \textbf{Trick} 3. binomische Formel im Zähler. 
+\item[a)] \textbf{Trick} 3. binomische Formel im Zähler ausrechnen. 
 
 Und aufpassen: $\frac{1}{2}(1 + 3i)$ ist \textbf{nicht} in der Form $a+ ib$. Punktabzug (Aufgabenblatt!).
 
-\item[b)] Auf den richtigen Winkel achten (Quadrant!). Es muss erkennbar sein, dass die Winkeltabelle benutzt wurde!
+\item[b)] Auf den richtigen Winkel achten (Quadrant!). Es muss erkennbar sein, dass die Winkeltabelle benutzt wurde (Aufgabenblatt). 
 
 \enquote{Beide Winkel} müssen in der PKD gleich sein.
 
-\item[c)] Skizze machen, wo die Zahl $z = 8$ liegt. Dann kann der Winkel abgelesen werden (Winkel $\alpha = \pi$ ist falsch!).
+\item[c)] \textbf{Tipp} Skizze machen, wo die Zahl $z = 8$ liegt. Dann kann der Winkel abgelesen werden (Winkel $\alpha = \pi$ ist falsch!).
 
-$\sqrt[3]{8} = 2$ darf ausgerechnet werden (sollte man wissen).
+$\sqrt[3]{8} = 2$ muss ausgerechnet werden (sollte man wissen).
 
 Standardwerte von Sinus und Cosinus müssen ausgewertet werden. Insbesondere $\sin(0)$, $\cos(0)$, $\sin(2\pi)$, $\cos(2\pi)$.
 
@@ -790,69 +790,73 @@ Es gilt $(n - k)! = (n - 1 - k + 1) =  (n - 1 - (k - 1))$. Das sieht man, wenn m
 
 Die Beweisrichtung von rechts nach links geht auch. 
 
-\item[e)] \textbf{Trick} Bei der i) muss ein $1^k$ ergänzt werden, um den binomischen Lehrsatz anwenden zu können. Dann erhält man $(1+i)^8$. Mit dem Hinweis, dass das Ergebnis reell sein soll, rechnet man wie folgt (schneller als \textsc{DeMoivre}). 
+Ausschließliches Umschreiben des Binomialkoeffizienten gibt keine Punkte.
+
+\item[e)] \textbf{Trick} Bei der i) muss ein $1^k$ ergänzt werden, um den binomischen Lehrsatz anwenden zu können. Dann erhält man $(1+i)^8$. Mit dem Hinweis, dass das Ergebnis reell sein soll, rechnet man wie folgt (schneller als \textsc{DeMoivre} und weniger fehleranfällig). 
 \begin{align*}
 (1+i)^8 = \left((1+i)^2\right)^4 = (2i)^4 = 2^4 \cdot i^4 = 16 \cdot \left(i^2\right)^2 = 16 \cdot (-1)^2 = 16 \cdot 1 = 16
 \end{align*}
 
 Die Lösung $(1+i)^8$ ist nicht ausreichend (s. Aufgabenblatt).
 
-\textbf{Trick} Bei der ii) keine Indextransformation machen. Das macht den Binomialkoeffizienten unschön. Guckt man sich an, was $x$ und $y$ sind, so stellt man fest, dass $x + y = -2 + 2 = 0$ ist. Es ist also sinnvoller, den bin. Lehrsatz für $k=0$ bis $k = 11$ anzuwenden (es ergibt sich $0$) und dann den Summanden, den man zu viel gezählt hat (es ist der Summand für $k = 0$) vom Ergebnis abzuziehen. Man erhält dann $(-2)^{11} = -2048$.
+\textbf{Trick} Bei der ii) keine Indextransformation machen. Das macht den Binomialkoeffizienten unschön. Guckt man sich an, was $x$ und $y$ sind, so stellt man fest, dass $x + y = -2 + 2 = 0$ ist. Es ist also sinnvoller, den bin. Lehrsatz für $k=0$ bis $k = 11$ anzuwenden (es ergibt sich $0$) und dann den Summanden, den man zu viel gezählt hat (es ist der Summand für $k = 0$) vom Ergebnis abzuziehen. Man erhält dann $0 - (-2)^{11} = 2048$.
 
-\item[f)] Aufpassen! Wenn ihr vergesst, einen $x$-Wert zu überprüfen, gibt es Punktabzug. Es müssen minimal drei Fälle untersucht werden (Betrag führt zu zwei Fällen und die Ungleichung -- durch das $x$ im Nenner --  auch zu zweien. Diese können in drei Fällen zusammengefasst werden).
+\item[f)] Aufpassen! Wenn ihr vergesst, einen $x$-Wert zu überprüfen, gibt es Punktabzug. Es müssen minimal drei Fälle untersucht werden (Betrag führt zu zwei Fällen und die Ungleichung -- durch das $x$ im Nenner --  auch zu zweien. Diese können in drei Fällen zusammengefasst werden). Eine Tabelle hilft dabei. 
 
-Definitionslücke beachten. Ein Fall wie $x < 1$ ist zu grob (was ist mit $x = -1$?).
+Definitionslücke bei $x = -1$ beachten. Ein Fall wie $x < 1$ ist zu grob (was ist mit $x = -1$?).
 
-Auch wichtig: Lösungsmengen für die einzelnen Fälle angeben! Und die Gesamtlösungsmenge $\Lsg_{\text{Ges}}$ angeben (richtig vereinigen -- sonst Punktabzug, s. Anmerkungen oben).
+Auch wichtig: Lösungsmengen für die einzelnen Fälle angeben! Und die Gesamtlösungsmenge $\Lsg_{\text{Ges}}$ angeben (richtig vereinigen -- sonst Punktabzug, s. Anmerkungen bei dem entsprechenden Blatt weiter oben).
 
 \item[g)] Matrix in ZSF bringen und Rückwärts einsetzten. Wird keine Lösungsmenge angegeben, gibt es keinen Punkt für die Lösung (Aufgabenblatt!). 
 
-Ob der Vektor $x \in \Lsg$ ist, kann auch unabhängig vom Rest der Aufgabe beantwortet werden (nachrechnen). Vergleiche auch den Lösungsvorschlag zum 3. Testat.
+Ob der Vektor $x \in \Lsg$ ist, kann auch unabhängig vom Rest der Aufgabe beantwortet werden (nachrechnen, vergleiche auch den Lösungsvorschlag zum 3. Testat).
 \end{itemize}
 
 \subsection*{Aufgabe 2}
 \begin{itemize}
-\item[a)] Beim (IA) darf in der Summe nicht sofort das $k$ durch $2$ ersetzt sein (siehe Anmerkungen zum entsprechenden Übungsblatt). Punktabzug.
+\item[a)] Beim (IA) darf in der Summe nicht sofort das $k$ durch $2$ ersetzt sein (siehe Anmerkungen zum entsprechenden Übungsblatt oben). Punktabzug.
 
 Sollte der (IA) schief gehen, ist der \enquote{Beweisversuch} (der Induktionsschritt) überflüssig. Die Induktion baut insbesondere auf dem (IA) auf (Induktionsprinzip).
 
-Rechenregeln der Fakultät beachten. 
+Rechenregeln der Fakultät beachten (typische Fehler sind weiter oben schon diskutiert). 
 
-\textbf{Trick} Die beiden Summen nach Einsetzten der (IV) nicht auf einen Hauptnenner bringen, sondern den Summanden, in dem $n!$ im Nenner steht, mit $(n+1)$ erweitern, sodass beide Nenner gleich sind ($n! \cdot (n+1) = (n+1)!$).
+\textbf{Trick} Die beiden Summen nach Einsetzten der (IV) nicht auf einen Hauptnenner bringen, sondern den Summanden, in dem $n!$ im Nenner steht, mit $(n+1)$ erweitern, sodass beide Nenner gleich sind (Es gilt: $n! \cdot (n+1) = (n+1)!$ -- klar machen, warum das gilt!).
 
-\item[b)] \textbf{Trick} $z\overline{z} = |z|^2$ und $-z+\overline{z} = -2\text{Im}(z)$. 
+\item[b)] \textbf{Trick} $z\overline{z} = |z|^2$ und $-z+\overline{z} = -2\text{Im}(z)$. Das macht es zu Beginn einfacher. 
 
 Zum Bestimmen von Real- und Imaginärteil der Lösung einen Koeffizientenvergleich machen.
 
-Klar: Nicht die Lösung $a = -3$ vergessen bei $a = \sqrt{9}$. Sonst Punktabzug.
+Vorsicht: Nicht die Lösung $a = -3$ vergessen bei $a = \sqrt{9}$. Sonst Punktabzug.
+
+Auch hier muss eine Lösungsmenge angegeben werden.
 
 \item[c)] Es müssen (in der Regel) beide Additionstheoreme verwendet werden, die auch auf dem Aufgabenblatt angegeben wurden.
 
 \item[d)] Polynomdivision machen. Daran kommt man nicht vorbei. Dabei stellt man fest, dass diese auf geht und man wirklich den Linearfaktor ohne Rest abspalten kann. Daher weiß man, dass $n_1 := 2i - 1$ eine Nullstelle ist.
 
-\textbf{Trick} Da $f$ nur Koeffizienten aus $\R$ hat, ist $n_2 := \overline{n_1} = -2i - 1$ auch eine Nullstelle. 
+\textbf{Trick} Da $f$ nur Koeffizienten aus $\R$ hat, ist $n_2 := \overline{n_1} = -2i - 1$ auch eine Nullstelle (wurde im Tutorium besprochen).
 
-Dann kann man diese mit dem Horner Schema abspalten (geht wahrscheinlich schneller als die Division $f(z) : ((z - n_1)(z - n_2))$ und man erhält die dritte Nullstelle: $n_3 := -3$. 
+Dann kann man diese mit dem \textsc{Horner}-Schema abspalten (geht wahrscheinlich schneller als die Division $f(z) : ((z - n_1)(z - n_2))$ und man erhält die dritte Nullstelle: $n_3 := -3$. Man kann dann die LFZ angeben. 
 
-Man kann dann die LFZ angeben. 
+Für die Kontrolle: Da $3\cdot(-1-2i)\cdot(-1+2i) = 15$ gilt, ist kein  Vorfaktor bei der LFZ nötig.
 
-Für die Kontrolle: Da $3\cdot(-1-2i)\cdot(-1+2i) = 15$ gilt, ist kein  Vorfaktor bei der LFZ nötig. 
+\item[e)] Nur am Bild zu argumentieren reicht nicht. Rechnerisch lösen! Das meint nicht, dass man konkrete Zahlen einsetzt und dann guckt, ob es injektiv oder surjektiv ist. Das sind nur Beispiele und keine Beweise.
 
-\item[e)] Nur am Bild zu argumentieren reicht nicht. Rechnerisch lösen (das meint nicht, dass man konkrete Zahlen einsetzt und dann guckt, ob es injektiv oder surjektiv ist. Das sind nur Beispiele und keine Beweise).
+Achtung: Geraden sind nicht automatisch surjektiv oder injektiv. Was ist zum Beispiel mit einer Parallelen zur $x$-Achse?
 
 Aufgabenstellung lesen: Wenn $f$ bijektiv ist, soll eine Umkehrabbildung angegeben werden. Fehlt diese, gibt es natürlich Punktabzug.
 
 \item[f)] Gesucht war hier:
 \begin{itemize}
 \item Menge, die nur den Nullvektor $0_{\R^3}$ enthält
-\item Gerade durch den Nullpunkt
-\item Ebene durch den Nullpunkt
+\item Gerade \textbf{durch den Nullpunkt}
+\item Ebene \textbf{durch den Nullpunkt}
 \item $\R^3$
 \end{itemize}
 
-Klar machen, warum das UVR von $\R^3$ sind. 
+Klar machen, warum das UVR von $\R^3$ sind. Geraden und Ebenen, die nicht durch den Nullpunkt gehen, sind keine UVR (es sollte jeder begründen können, wieso dies so ist).
 
-Weiterführende Fragestellung: Wie sehen alle Typen von UVR im $\R^2$ oder $\R^5$ aus?
+Weiterführende interessante Fragestellung: Wie sehen alle Typen von UVR im $\R^2$ oder $\R^5$ aus?
 \end{itemize}
 
 
@@ -861,9 +865,9 @@ Weiterführende Fragestellung: Wie sehen alle Typen von UVR im $\R^2$ oder $\R^5
 \newpage
 \section*{Testat 3}
 \begin{itemize}
-\item Beim LGS kann man auch anders herum die richtige Lösung finden, indem man sich fragt, ob der Ortsvektor der Hyperebene der Lösungsmenge (die Lösungsmenge ist eine Hyperebene im $\R^6$) das LGS löst (Matrix-Vektor-Multiplikation).
+\item Beim LGS kann man auch anders herum die richtige Lösung finden, indem man sich fragt, ob der Ortsvektor der Hyperebene der Lösungsmenge (die Lösungsmenge ist eine Hyperebene im $\R^6$) das LGS löst (Matrix-Vektor-Multiplikation). Dies hatte ich ja auch in den Tutorien schon einmal erwähnt.
 
-Ansonsten die Variablen frei wählen, bei der keine Stufe in der ZSF ist. Das heißt, wenn zwei Variablen $x_k$ und $x_j$ frei gewählt werden können, wählt diese als frei, bei der der Index \textbf{größer} ist. Das haben wir bisher immer so gemacht (auch wenn das andere auch richtig ist). Siehe Tutorium.
+\textbf{Tipp} Ansonsten die Variablen frei wählen, bei der keine Stufe in der ZSF ist. Das heißt, wenn zwei Variablen $x_k$ und $x_j$ frei gewählt werden können, wählt diejenige als frei, bei der der Index \textbf{größer} ist. Das haben wir bisher immer so gemacht (s. Tutorium) und es ist einfacher zu korrigieren (auch wenn das andere auch richtig ist). Falls ihr anders vorgeht, werdet ihr eure Lösung evtl. nicht unter den Lösungsvorschlägen gefunden haben, auch wenn eure Lösung richtig war (klar machen, warum es \enquote{verschiedene} Lösungen gibt. Das heißt, obwohl die Lösungsmengen eigentlich verschieden aussehen, sind sie doch identisch).
 
 Das LGS ist bereits in ZSF. 
 
