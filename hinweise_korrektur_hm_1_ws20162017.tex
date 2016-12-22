@@ -807,17 +807,70 @@ Auch wichtig: Lösungsmengen für die einzelnen Fälle angeben! Und die Gesamtl�
 
 \item[g)] Matrix in ZSF bringen und Rückwärts einsetzten. Wird keine Lösungsmenge angegeben, gibt es keinen Punkt für die Lösung (Aufgabenblatt!). 
 
-Ob der Vektor $x \in \Lsg$ ist, kann auch unabhängig vom Rest der Aufgabe beantwortet werden (nachrechnen).  
-
+Ob der Vektor $x \in \Lsg$ ist, kann auch unabhängig vom Rest der Aufgabe beantwortet werden (nachrechnen). Vergleiche auch den Lösungsvorschlag zum 3. Testat.
 \end{itemize}
 
 \subsection*{Aufgabe 2}
 \begin{itemize}
-\item 
+\item[a)] Beim (IA) darf in der Summe nicht sofort das $k$ durch $2$ ersetzt sein (siehe Anmerkungen zum entsprechenden Übungsblatt). Punktabzug.
+
+Sollte der (IA) schief gehen, ist der \enquote{Beweisversuch} (der Induktionsschritt) überflüssig. Die Induktion baut insbesondere auf dem (IA) auf (Induktionsprinzip).
+
+Rechenregeln der Fakultät beachten. 
+
+\textbf{Trick} Die beiden Summen nach Einsetzten der (IV) nicht auf einen Hauptnenner bringen, sondern den Summanden, in dem $n!$ im Nenner steht, mit $(n+1)$ erweitern, sodass beide Nenner gleich sind ($n! \cdot (n+1) = (n+1)!$).
+
+\item[b)] \textbf{Trick} $z\overline{z} = |z|^2$ und $-z+\overline{z} = -2\text{Im}(z)$. 
+
+Zum Bestimmen von Real- und Imaginärteil der Lösung einen Koeffizientenvergleich machen.
+
+Klar: Nicht die Lösung $a = -3$ vergessen bei $a = \sqrt{9}$. Sonst Punktabzug.
+
+\item[c)] Es müssen (in der Regel) beide Additionstheoreme verwendet werden, die auch auf dem Aufgabenblatt angegeben wurden.
+
+\item[d)] Polynomdivision machen. Daran kommt man nicht vorbei. Dabei stellt man fest, dass diese auf geht und man wirklich den Linearfaktor ohne Rest abspalten kann. Daher weiß man, dass $n_1 := 2i - 1$ eine Nullstelle ist.
+
+\textbf{Trick} Da $f$ nur Koeffizienten aus $\R$ hat, ist $n_2 := \overline{n_1} = -2i - 1$ auch eine Nullstelle. 
+
+Dann kann man diese mit dem Horner Schema abspalten (geht wahrscheinlich schneller als die Division $f(z) : ((z - n_1)(z - n_2))$ und man erhält die dritte Nullstelle: $n_3 := -3$. 
+
+Man kann dann die LFZ angeben. 
+
+Für die Kontrolle: Da $3\cdot(-1-2i)\cdot(-1+2i) = 15$ gilt, ist kein  Vorfaktor bei der LFZ nötig. 
+
+\item[e)] Nur am Bild zu argumentieren reicht nicht. Rechnerisch lösen (das meint nicht, dass man konkrete Zahlen einsetzt und dann guckt, ob es injektiv oder surjektiv ist. Das sind nur Beispiele und keine Beweise).
+
+Aufgabenstellung lesen: Wenn $f$ bijektiv ist, soll eine Umkehrabbildung angegeben werden. Fehlt diese, gibt es natürlich Punktabzug.
+
+\item[f)] Gesucht war hier:
+\begin{itemize}
+\item Menge, die nur den Nullvektor $0_{\R^3}$ enthält
+\item Gerade durch den Nullpunkt
+\item Ebene durch den Nullpunkt
+\item $\R^3$
+\end{itemize}
+
+Klar machen, warum das UVR von $\R^3$ sind. 
+
+Weiterführende Fragestellung: Wie sehen alle Typen von UVR im $\R^2$ oder $\R^5$ aus?
 \end{itemize}
 
 
 
+
+\newpage
+\section*{Testat 3}
+\begin{itemize}
+\item Beim LGS kann man auch anders herum die richtige Lösung finden, indem man sich fragt, ob der Ortsvektor der Hyperebene der Lösungsmenge (die Lösungsmenge ist eine Hyperebene im $\R^6$) das LGS löst (Matrix-Vektor-Multiplikation).
+
+Ansonsten die Variablen frei wählen, bei der keine Stufe in der ZSF ist. Das heißt, wenn zwei Variablen $x_k$ und $x_j$ frei gewählt werden können, wählt diese als frei, bei der der Index \textbf{größer} ist. Das haben wir bisher immer so gemacht (auch wenn das andere auch richtig ist). Siehe Tutorium.
+
+Das LGS ist bereits in ZSF. 
+
+\item Bei der Polynomdivision können Ergebnisse mit einem Koeffizienten $\neq 1$ vor dem $z^2$ direkt ausgeschlossen werden. Klar machen, warum dies geht.
+
+\item Bei den Funktionen geht es am schnellsten, die Frage nach Injektivität, Surjektivität und Bijektivität mit einer Zeichnung zu entscheiden. Wo schneiden Parallelen zur $x$-Achse den Graphen von $f$ nicht / einmal / mehrmals / genau einmal? (Auf den Wertebereich achten! -- nur dort dürfen Parallelen gezogen werden).
+\end{itemize}
 
 %Lizenz
 \newpage
