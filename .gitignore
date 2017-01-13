@@ -6,3 +6,6 @@ nudel.sh
 *.fls
 *.synctex.gz
 *.out
+*.bbl
+*.blg
+
