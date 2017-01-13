@@ -1,5 +1,10 @@
-% Hinweise zur Korrektur der HM1-Abgaben
-% **************************************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%
+%            Hinweise zur Korrektur der HM1-Abgaben
+%            **************************************
 %
 %
 % Autor:	Heiner Stroick
@@ -11,7 +16,9 @@
 % Die Bedingungen der Lizenz können unter folgendem Link eingesehen werden: 
 % 			http://creativecommons.org/licenses/by-nc-sa/4.0/deed.de
 %
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[11pt, a4paper]{article}
 \usepackage[dvips, bottom=3cm, top=3cm, right=3cm, left=3cm]{geometry}
@@ -49,6 +56,7 @@ pdfauthor = Heiner Stroick,
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\D}{\mathbb{D}}
+\newcommand{\Poly}{\mathbb{P}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\eps}{\varepsilon}
@@ -880,20 +888,114 @@ Das LGS ist bereits in ZSF.
 
 
 \newpage
+\section*{Blatt 9}
+\begin{itemize}
+\item In der 1) b) i) soll die Mengendefinition des Spanns angegeben werden. Nur die Vektoren als Spann aufzuschreiben ist nicht ausreichend.
+
+Zu sagen, dass der Spann ein Erzeugendensystem ist, ist falsch. Nur Vektoren können ein EZS bilden. Und ihr müsst sagen, welcher Raum erzeugt wird. Ohne diese Angabe ist das wie die Aussage: \enquote{Die Zahl $9$ ist größer.} ($\rightarrow$ Größer als was?)
+
+Ohne Rechnung oder Begründung kann man nicht sagen, dass die Vektoren den $\R^3$ erzeugen. Das \enquote{sieht} man hier auch nicht. 
+
+\item Zur ii): \enquote{anschaulich} meint hier die Argumentation, dass vier Vektoren im $\R^3$ immer (!) linear abhängig sein müssen. Das hat Dimensionsgründe, die man sich leicht überlegen kann.
+
+Die Lineare Abhängigkeit / Unabhängigkeit von Vektoren kann man an der Matrix in ZSF ablesen.
+
+\item Zur iii): Mit der anschaulichen Argumentation aus ii) ist dann auch klar, dass die Vektoren keine Basis des $\R^3$ bilden können. 
+
+Werden schon senkrechte Vektoren ausgewählt, ist die ONB mit \textsc{Gram-Schmidt} in iv) leichter zu berechnen.
+
+Hinweis dazu: Vor dem normieren könnt ihr Vektoren natürlich vereinfachen. Ist in jeder Komponente des Vektors bspw. ein $\frac{1}{9}$ vorhanden, könnt ihr die $\frac{1}{9}$ ausklammern und unter den Tisch fallen lassen (Vorsicht beim Aufschrieb: Die Vektoren sind natürlich nicht gleich! Sie zeigen nur in die gleiche Richtung!) Dann muss nur noch der Vektor mit den ganzen Zahlen normiert werden.
+
+\item Zur v): Die einfachste ONB ist hier natürlich $e_1, e_2, e_3$. Man sieht auf Anhieb, dass die Vektoren die Länge $1$ haben und paarweise senkrecht stehen.
+
+\item Basen werden ohne Mengenklammern angegeben. Schreibt einfach: Basis von $\R^3$: $v_1$, $v_2$, $v_3$.
+
+\item Der Spann von Vektoren ist keine Basis! Der Spann ist zunächst eine Menge. Zudem enthält der Spann unendlich viele linear abhängige Vektoren (der Spann enthält immer unendlich viele Vektoren!). 
+
+Dass der Spann immer ein Unterraum ist, ist keine Begründung dafür, dass der Spann eine Basis \emph{sei}. Es ist eine Begründung dafür, dass der Spann generell eine Basis \emph{hat}. 
+
+Es gibt nicht \emph{die} Basis eines Vektorraums. Es gibt (von einigen Spezialfällen mal abgesehen\footnote{Überlegt mal, welchen Spezialfall ich meine. Einen haben wir kennengelernt. Spontan fällt mir auch kein zweiter ein\dots \smiley{}}) unendlich viele verschiedene Basen eines Vektorraums. Alle Basen haben aber dieselbe Länge.
+
+\item Für eine ONB müssen \textbf{alle} Basisvektoren paarweise senkrecht stehen und normiert sein.
+
+\item Die Norm eines Vektors wird mit $\|v\|$ notiert. Die Norm ist gewissermaßen die Weiterführung des Betrags (also $|x|$) aus den reellen Zahlen in die höherdimensionalen Räume und beschreibt die Länge des Vektors (also die Länge des Vektorpfeils).
+
+\item Zur c): Ihr könnt natürlich vorher überprüfen, welche Vektoren linear abhängig sind, sodass ihr für diese gar nicht erst \textsc{Gram-Schmidt} machen müsst.
+
+Steckt ihr einen linear abhängigen Vektor in das \textsc{Gram-Schmidt}-Verfahren, kommt am Ende der Nullvektor heraus. Dieser ist per Definition linear abhängig und wird nicht zur Basis gezählt.
+
+Generell ist es aus Dimensionsgründen nicht sinnvoll, im $\R^4$ \textsc{Gram-Schmidt} für $5$ Vektoren zu machen. Dies ist anschaulich klar (vgl. Aufgabe b) ii)). Eine Basis im $\R^4$ besteht natürlich aus $4$ Vektoren. Da braucht man nicht einen 5. Vektor für die Basis zu bestimmen (diesen gibt es auch gar nicht!). Das Problem könnt ihr euch im $\R^2$ auch gut aufzeichnen. Ihr findet keinen dritten Vektor, der zu $(1, 0)^\intercal$ \textbf{und} $(0, 1)^\intercal$ orthogonal ist.
+
+\item Für die c) ii) muss man natürlich kein LGS lösen, sondern kann die Koeffizienten leicht mit der Formel aus dem Skript bestimmen (s. Testat 4 unten).
+
+\item Das Skalarprodukt zweiter Vektoren ist eine reelle Zahl!
+
+\item Zur 2) a): Soll hier nachgewiesen werden, dass es sich um einen Untervektorraum handelt, solltet ihr angeben, was der Oberraum ist. Dies ist hier der $\C^{2 \times 2}$ bzw. $\C^{3 \times 3}$.
+
+Die Mengen dürft ihr natürlich benennen. Mengen werden mit Großbuchstaben benannt, Vektoren mit kleinen Buchstaben.
+
+Auch wenn die Mengen Matrizen enthalten, spricht man von Vektoren. Es heißt ja \emph{Vektor}raum.
+
+Als Tipp kann man festhalten: Immer wenn irgendwelche Komponenten für einen UVR so verrechnet werden sollen, dass eine Zahl $\neq 0$ dabei herauskommen soll, handelt es sich in der Regel nicht um einen UVR (weil immer das UVR-Axiom \RM{2} nicht erfüllt ist).
+
+Das Nullelement, also das neutrale Element der Addition, ist hier die Nullmatrix. Ihr könnt diese als $0_{\C^{2 \times 2}}$ bezeichnen, um sie von der $0_\R$ zu unterscheiden.
+
+Nach wie vor gilt: Beispiele sind keine Beweise! Beispiele sind nur erlaubt, sollen Aussagen widerlegt werden.
+
+\item Die Matrix aus c) i) ist überhaupt kein Element der beschriebenen Menge. Sie kann also auch nicht dargestellt werden. Ihr solltet zu Beginn immer überprüfen, ob der darzustellende Vektor überhaupt Teil der Menge ist. 
+
+\item Für die Darstellung der Matrix aus c) ii) muss man sich natürlich vorher eine Basis überlegen. Die Basis besteht aus drei Vektoren (Vektoren sind hier Matrizen, wie schon erwähnt).
+
+Ihr solltet euch überlegen, warum es ausreicht, dass die Matrizen der Basis immer nur Einsen und Nullen enthalten (Stichwort $\C$-Vektorraum). Welche Vektoren müsste die Basis enthalten, wenn die Menge als $\R$-Vektorraum und als Teilmenge von $\C^{2 \times 2}$ aufgefasst werden würde?
+
+\item Zur Aufgabe 3: Generell gilt: $\text{dim~} \Poly_n = n + 1$, also $\text{dim~} \Poly_2 = 3$.
+
+\item Zur a) i): Gebt an, wie ihr die Koeffizienten berechnet (habt). Ihr könnt zur Lösung die Aufgabe auch in Matrizenschreibweise umformen. Wenn ich das Gefühl hatte, dass ihr nicht wisst, wie die Darstellung funktioniert, habe ich das nicht durchgehen lassen (und \enquote{woher?} dran geschrieben). 
+
+\item Zur ii): Soll die lineare Unabhängigkeit gezeigt werden, geschieht dies am einfachsten über die Definition der linearen Unabhängigkeit.
+
+\item Zur iii) Die Vektoren $p_1$ und $p_2$ können allein aus Dimensionsgründen keine Basis von $\Poly_2$ sein (selbes Argument wie in b) ii) nur anders herum).
+
+Wenn berechnet wurde, dass der Vektor $q(x) = x^2 + x + 1$ nicht mit $p_1$ und $p_2$ dargestellt werden kann (und das $p_1$ und $p_2$ deshalb keine Basis bilden können), ist das natürlich auch in Ordnung. Eine Basis muss nämlich jeden Vektor des Raums erreichen können.
+
+\item Die Vektoren (hier Polynome) heißen $p_1$, $p_2$ (und nicht $p_1(x)$ oder $p_2(x)$ -- siehe oben).
+\end{itemize}
+
+
+
+
+
+
+
+\newpage
 \section*{Testat 4}
 \begin{itemize}
 \item Wenn ihr das LGS in 1) gelöst habt, ist die 2) geschenkt. Es ist für 2) genau dasselbe LGS zu lösen. Die Koeffizienten $\lambda_1, \lambda_2, \lambda_3$ habt ihr dann schon berechnet.
 
-Die meisten Fehler in der 1) bestanden daraus, dass die Lösungsmenge $\Lsg$ nicht korrekt aufgeschrieben wurde. Das solltet ihr mittlerweile beherrschen, da das zur Genüge in den Globalübungen, Tutorien und VL gemacht wurde. Da Punkte zu verlieren ist extrem ärgerlich.
+Die meisten Fehler in der 1) bestanden daraus, dass die Lösungsmenge $\Lsg$ nicht korrekt aufgeschrieben wurde. Das solltet ihr mittlerweile beherrschen, da das zur Genüge in den Globalübungen, Tutorien und VL gemacht wurde. Da Punkte zu verlieren ist extrem ärgerlich. Und das habe ich hier auch aufgenommen (siehe oben).
 
 \item In der 3) löst man natürlich kein LGS, sondern verwendet die Formel für die Koeffizienten, wenn man eine \textbf{ONB} gegeben hat (Achtung: Das geht natürlich nur bei einer ONB!). Diese Formel lautet:
 \begin{align*}
 \mu_i = \langle w, u_i \rangle,
 \end{align*}
-wobei $\langle \cdot, \cdot \rangle$ das Skalarprodukt meint.
-
+wobei $\langle \cdot, \cdot \rangle$ das Skalarprodukt meint ($w$ soll dargestellt werden, $u_i$ ist der $i$-te Basisvektor der ONB).
 
 \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %Lizenz
 \newpage
