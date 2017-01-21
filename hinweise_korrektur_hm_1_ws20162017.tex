@@ -986,6 +986,108 @@ wobei $\langle \cdot, \cdot \rangle$ das Skalarprodukt meint ($w$ soll dargestel
 
 
 
+\newpage
+\section*{Blatt 10}
+\begin{itemize}
+\item Für die Linearität müssen beide Eigenschaften gezeigt werden. Das ist die Linearität unter der Addition (L1) und die Linearität unter skalarer Multiplikation (L2).
+
+Der Schluss
+\begin{align*}
+f(0) = 0 \Rightarrow f \text{~linear}
+\end{align*}
+ist falsch. Die Forderung ist zu schwach. Zum Beispiel gilt $\sqrt{0} = 0$, aber die Wurzelfunktion ist nicht linear (kann man sich leicht überlegen!).
+
+Es gilt nur 
+\begin{align*}
+f(0) \neq 0 \Rightarrow f \text{~nicht~linear}
+\end{align*}
+
+\textbf{Achtung!} Im Argument von $f$ werden Vektoren \textbf{als Zeilen} geschrieben! Das heißt, wir schreiben
+\begin{align*}
+f(x+a,y+b,z+c) 
+\end{align*}
+und nicht
+\begin{align*}
+f\left(\Spvek[c]{x;y;z} + \Spvek[c]{a;b;c}\right).
+\end{align*}
+
+Das Nachrechnen der Linearität von Abbildungen erfolgt wie im Tutorium. 
+
+\item Die Aufgaben 1) b) und c) gehören sicherlich zu den interessanten Aufgaben auf dem Blatt. Diese sind besonders wichtig.
+
+\item Die Matrix kann nur eine $3 \times 3$-Matrix sein, weil sonst keine Abbildung von $\R^3$ nach $\R^3$ vorliegt.
+
+Da die Basis des Bildes vorgegeben ist und die linear unabhängigen Spaltenvektoren von $A$ immer eine Basis des Bildes bilden, kann für den dritten Spaltenvektor von $A$ ein linear abhängiger Vektor gewählt werden. Dieser liegt im Spann der anderen beiden (klar) und sowieso im Bild (damit auch klar). Im einfachsten Fall wählt man
+\begin{align*}
+a_3 = \Spvek[c]{0;0;0}.
+\end{align*}
+
+\item Zur c): Man überlegt sich zunächst, dass die Matrix eine $3 \times 4$-Matrix sein muss. Da $\dim \text{Kern} f = 2$ nach der Aufgabenstellung gilt, braucht die Matrix nach dem Dimensionssatz zwei linear unabhängige Spalten bzw. Zeilen (Zeilenrang = Spaltenrang; Argumentation über das Bild).
+
+Als Ansatz wählt man dann  
+
+\begin{align*}
+A = 
+\left(
+\begin{array}{cccc}
+1 & 0 & a & b\\
+0 & 1 & c & d\\
+0 & 0 & 0 & 0\\
+\end{array}
+\right).
+\end{align*}
+
+Dann erhält man über die Rechnungen 
+\begin{align*}
+A\cdot v_1 = 0 = 0_{\R^3}
+\end{align*}
+und
+\begin{align*}
+A\cdot v_2 = 0 = 0_{\R^3}
+\end{align*}
+ein LGS, das man dann für $a$, $b$, $c$ und $d$ lösen kann. Weiteres wird in der Globalübung / Musterlösung erklärt.
+
+\textbf{Vorsicht} Viele hatten 
+\begin{align*}
+A\cdot v_i = 0 = 0_{\R^4}
+\end{align*}
+gerechnet, aber das ist natürlich falsch (so funktioniert die Matrixmultiplikation nicht).
+
+\item Sollen $2 \times 2$-Matrizen invertiert werden, geht dies schneller über die Formel als mit \textsc{Gauß}.
+
+\item Vorsicht bei der Multiplikation von Matrizen und dem Transponieren von Produkten:
+\begin{align*}
+(AB)^\intercal = B^\intercal A^\intercal
+\end{align*}
+
+Solche Regeln gelten auch beim Invertieren! Vorsicht!
+
+\item Für die Aufgabe 2) b): $D^{-1}$ kann auch über die Adjunkte Matrix bestimmt werden (siehe Skript).
+
+\item Aufgabe 3) b) ist auch interessant. 
+
+\textbf{Achtung!} Auf dem Blatt war ein Tippfehler. Die Abbildung muss von $\R^4$ nach $\R^3$ gehen (sonst passt die Matrix natürlich auch nicht).
+
+Für den Kern muss das LGS $Ax = 0 = 0_{\R^3}$ gelöst werden.
+
+i) und ii) löst man mit dem Dimensionssatz. Hier gilt
+\begin{align*}
+\dim V = \dim \R^4 = 4.
+\end{align*}
+Hat man das LGS für den Kern gelöst, kann direkt eine Basis vom Bild abgelesen werden (hatten wir auch so im Tutorium gemacht). Hier haben sich viele zu viel Arbeit gemacht und anderweitig linear unabhängige Spaltenvektoren von $B$ gesucht.
+
+Für die Argumentation, warum $f$ nicht surjektiv ist, muss es heißen:
+\begin{align*}
+\dim \text{Bild} f = 2 \neq 4 = \dim \R^4 = \dim V
+\end{align*}
+Hier hatten viele $2 \neq 3$ stehen, aber dann ist der Dimensionssatz falsch ($2 + 2 = 4$). Wie oben gesagt, auf dem Blatt hatte sich ein Fehler eingeschlichen.
+ 
+\item Mittlerweile solltet ihr ein LGS fehlerfrei lösen und auch die Lösungsmenge korrekt notieren können.
+
+\item Für die 3) e) empfiehlt sich die Berechnung über die Determinante. Ist die Determinante $\neq 0$, ist die Matrix invertierbar. Über den Rang zu argumentieren ist zeitaufwändiger und fehleranfälliger.
+
+Achtet darauf, das Polynom in $a$ (nichts anderes ist die Determinante für ein unbekanntes $a$) korrekt gleich $0$ zu setzen.
+\end{itemize}
 
 
 
