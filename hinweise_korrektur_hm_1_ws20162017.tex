@@ -1098,6 +1098,67 @@ Achtet darauf, das Polynom in $a$ (nichts anderes ist die Determinante für ein 
 
 
 
+\newpage
+\section*{Blatt 10}
+\begin{itemize}
+\item \textbf{Auf Klammersetzung achten!} Ich kann es nur immer wieder wiederholen. Gerade bei \textsc{Laplace}. 
+
+Oder bei Potenzen:
+\begin{align*}
+(-3)^4 \neq -3^4
+\end{align*}
+
+Oder komplexen Zahlen:
+\begin{align*}
+1 + 2i\cdot 4 \neq (1 + 2i)\cdot 4
+\end{align*}
+
+Pro Rechenfehler gibt es in der Klausur einen Punkt Abzug. 
+
+\item \textbf{Achtung} Das charakteristische Polynom bleibt unter elementaren Zeilenumformungen nicht gleich. Das heißt, es musst tatsächlich
+\begin{align*}
+P_A(\lambda) = \det(A - \lambda E)
+\end{align*}
+ausgerechnet werden und die Matrix $A$ kann vorher nicht vereinfacht werden.
+
+\item Rechengesetze für Determinaten und Inversen sollte man auswendig kennen. Nur zur Info: In der Regel gilt
+\begin{align*}
+\det(A + B) \neq \det(A) + \det(B).
+\end{align*}
+Versucht mal, euch ein Gegenbeispiel zu überlegen.
+
+\item In der Aufgabe 3 c) ist das \enquote{Wie können Sie Ihre Ergebnisse überprüfen?} so gemeint, dass man die Determinante noch einmal über die Eigenwerte berechnet. Kommt da nicht dasselbe raus, wie man vorher für die Determinante bestimmt hat, sind entweder Eigenwerte oder Determinante falsch. Es gilt ja
+\begin{align*}
+\det A = \prod_{i=1}^n \lambda_i.
+\end{align*}
+
+\item In der d) ist nur gefragt, welche Matrizen invertierbar \emph{sind}. Es wird nicht gefordert, die Matrix auch tatsächlich zu invertieren! Das ist natürlich erheblich zeitaufwändiger und dieser Unterschied kann in der Klausur wichtig sein. 
+
+Am einfachsten ist dann der Zusammenhang 
+\begin{align*}
+A \text{~invertierbar} \Leftrightarrow A^{-1} \text{~existiert} \Leftrightarrow \det A \neq 0.
+\end{align*}
+
+Und die Determinante kriegt man ja als Produkt der Eigenwerte. 
+
+\textbf{Tipp} Wenn man sich nicht sicher ist, ob es $= 0$ oder $\neq 0$ heißt, kann sich an die Formel für die Inverse einer $2 \times 2$ Matrix erinnern.
+
+Da heißt es
+\begin{align*}
+A^{-1} = \frac{1}{\det A} \cdot \left(
+\begin{array}{cc}
+\dots & \dots\\ 
+\dots & \dots\\
+\end{array}
+\right),
+\end{align*}
+und da $\det A$ im Nenner steht, existiert $A^{-1}$ nur, wenn $\det A \neq 0$ ist. Durch $0$ wird ja nicht geteilt \smiley{}
+
+(Das ganze gilt auch für die allgemeine Formel einer Inversen mithilfe der Adjunkten Matrix.)
+\end{itemize}
+
+
+
 
 %Lizenz
 \newpage
