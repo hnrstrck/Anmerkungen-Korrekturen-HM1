@@ -24,6 +24,7 @@
 \usepackage[dvips, bottom=3cm, top=3cm, right=3cm, left=3cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
+\usepackage[dvipsnames]{xcolor}
 \usepackage[babel,german=quotes]{csquotes}
 \usepackage[T1]{fontenc}
 \usepackage{amssymb}
@@ -58,6 +59,7 @@ pdfauthor = Heiner Stroick,
 \newcommand{\D}{\mathbb{D}}
 \newcommand{\Poly}{\mathbb{P}}
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\eps}{\varepsilon}
 \newcommand{\Var}{\operatorname{Var}} 
@@ -550,7 +552,7 @@ Dazu: $|x|$ ist in 0 nicht differenzierbar (diff'bar). $|x+3$ ist in $x = -3$ ni
 
 Dann tut eine Skizze ihr übriges:
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[domain=-4:4] 
     \draw[very thin,color=gray] (-3.9,-0.1) grid (3.9,3.9);
@@ -1205,12 +1207,123 @@ und da $\det A$ im Nenner steht, existiert $A^{-1}$ nur, wenn $\det A \neq 0$ is
 \begin{center}
 \textbf{Hinweis}
 
-Es können keine weiteren Punkte für die Studienleistung erreicht werden.
+{\small Es können keine weiteren Punkte für die Studienleistung erreicht werden. Deshalb hier nur einige Anregungen zu den Blättern, die mir bei der Durchsicht der Aufgaben gekommen sind.}
 \end{center}
 \end{mdframed}
 
 \begin{itemize}
-\item folgt.
+\item Denkt an die Gleichung für die Vielfachheiten für Eigenwerte. Die hilft manchmal.
+
+\item Interessant sind solche Aufgaben, wo man z.\,B. nur Spur, Determinante und einen Eigenwert einer Matrix kennt und die restlichen bestimmen soll.
+
+Dabei gilt:
+
+Ist $A \in \R^{n \times n}$ und $z$ ein Eigenwert (also eine Nullstelle des charakteristischen Polynoms), dann ist $\overline{z}$ auch automatisch eine Nullstelle und damit ein Eigenwert. \textbf{Aber Achtung!} Für diesen Schluss braucht man zwingend, dass $A \in \R^{n \times n}$ ist. Wäre $A \in \C^{n \times n}$, wäre der Schluss nicht ohne weiteres richtig. 
+
+Das liegt daran, dass für eine reelle Matrix (also $A \in \R^{n \times n}$) das charakteristische Polynom auch nur reelle Koeffizienten hat (also ein Polynom in $\R$ ist). Eine komplexe Matrix ($A \in \C^{n \times n}$) muss nicht unbedingt ein charakteristisches Polynom nur in $\R$ haben, da können echt reelle und echt komplexe Koeffizienten gemischt auftreten. Und dann ist $\overline{z}$ neben $z$ nicht unbedingt Nullstelle.
+
+\item \textbf{Durch Matrizen kann man nicht teilen!}
+
+Möchte man die Gleichung
+\begin{align*}
+AB = C
+\end{align*}
+nach $A$ auflösen, rechnet man \textbf{nicht} 
+\begin{align*}
+A = \frac{C}{B},
+\end{align*}
+sondern multipliziert mit der Inversen von $B$, sprich $B^{-1}$ (mal vorausgesetzt, dass diese existiere). Dabei muss die Richtung angegeben werden, da die Matrixmultiplikation in der Regel nicht kommutativ ist, d.\,h. es gilt in der Regel
+\begin{align*}
+AB \neq BA.
+\end{align*}
+Richtig wäre also:
+\begin{align*}
+AB = C \qquad \Leftrightarrow \qquad A = CB^{-1}
+\end{align*}
+
+\item Guckt euch die Sätze zu Eigenwerten und -vektoren von transponierten und inversen Matrizen an. Da gibt es einige spannende Zusammenhänge.
+
+\item Mit am interessantesten ist die Aufgabe 1) f) (?) auf dem Blatt. Weil die Musterlösung da etwas knapp ausfällt, hier einige Worte dazu.
+
+Wenn nur bekannt ist, dass für jeden Eigenwert die algebraische gleich der geometrischen Vielfachheit ist, heißt das, dass es eine \emph{Basis aus Eigenvektoren} gibt.
+
+Warum? Es kann für eine Matrix $A \in \K^{n \times n}$ natürlich maximal $n$ (nicht notwendigerweise verschiedene) Eigenwerte geben (Begründung über den Grad des charakteristischen Polynoms). Ferner werden für die Basis linear unabhängige Vektoren des $\K^n$ gesucht, von denen es maximal $n$ Stück gibt. Da die Summe aller algebraischen Vielfachheiten gleich $n$ ist (das gilt immer!) und hier $\mu_a(\lambda_i ) = \mu_g(\lambda_i)$ für alle Eigenwerte gilt, ist also auch die Summe aller geometrischen Vielfachheiten gleich $n$ (diese Aussage ist natürlich nicht allgemein richtig, sondern nur hier unter diesen Besonderen Voraussetzungen). 
+
+Da die Dimension eines Vektorraums die Länge einer Basis dieses Raums beschreibt, findet man also hier für jeden Eigenraum eine Basis aus so vielen Eigenvektoren, wie durch die geometrische Vielfachheit (bzw. die algebraische) angegeben wird (die geometrische Vielfachheit ist ja Dimension des Eigenraums). Da ferner Eigenvektoren zu verschiedenen Eigenwerten linear unabhängig sind (das gilt immer!), kommen sich die Eigenvektoren der verschiedenen Eigenräume nicht in die Quere, sodass es tatsächlich insgesamt $n$ linear unabhängige Eigenvektoren gibt, die eine Basis bilden. 
+
+Was ist nun mit der \emph{Ortho-Normal-Basis aus Eigenvektoren}? Die gibt es allgemein nicht. Ich mache das graphisch klar. 
+
+Sei $B \in \R^{2 \times 2}$ mit zwei Eigenwerten $\lambda_1$ und $\lambda_2$. Dann gilt nach Voraussetzung 
+\begin{align*}
+\mu_a(\lambda_1) = 1 = \mu_g(\lambda_1)
+\end{align*}
+und
+\begin{align*}
+\mu_a(\lambda_2) = 1 = \mu_g(\lambda_2).
+\end{align*}
+
+Das heißt, dass die beiden Eigenräume Geraden im $\R^2$ sind, die zum Beispiel so liegen könnten:
+
+\begin{figure}[H]
+\centering
+\scalebox{0.6}{
+\begin{tikzpicture}[domain=-4:4] 
+    \draw[very thin,color=gray] (-3.9,-3.9) grid (3.9,3.9);
+    \draw[<->] (-4.2,0) -- (4.2,0);
+    \draw[<->] (0,-4.2) -- (0,4.2); 
+    \draw[color=OliveGreen,domain=-3.9:3.9,smooth,variable=\x]   	plot (\x,{-0.2*\x})             node[right] {$E(\lambda_1)$}; 
+    \draw[color=blue,domain=-3.9:3.9,smooth,variable=\x]    		plot (\x,{0.4*\x})             	node[right] {$E(\lambda_2)$}; 
+\end{tikzpicture}
+}
+\end{figure}
+
+Natürlich lässt sich in diesem Falle eine Basis aus Eigenvektoren angeben (siehe oben~-- zwei Eigenvektoren genügen, um den gesamten Raum $\R^2$ aufzuspannen). 
+
+Da die Eigenräume aber nicht senkrecht aufeinander stehen (das ist durch das Bild offensichtlich), würde man mit \textsc{Gram-Schmidt} ansetzen, um eine ONB zu bestimmen. Dabei wird allerdings (hier) der Eigenraum $E(\lambda_2)$ verlassen (blau), sodass man zwar einen senkrechten (Basis-)Vektor $u$ (rot) zu einem Eigenvektor aus $v_1 \in E(\lambda_1)$ (grün) finden würde, aber $u$ wäre dann kein Eigenvektor mehr (nicht auf der grünen oder blauen Linie)! Es gilt -- wie im Bild gut zu erkennen -- offenbar: $u \notin E(\lambda_1)$ und $u \notin E(\lambda_2)$. Damit existiert keine \emph{ONB aus Eigenvektoren} (sondern nur eine \enquote{normale} ONB, von der \enquote{zufällig} ein Basisvektor auch ein Eigenvektor ist).
+
+\begin{figure}[H]
+\centering
+\scalebox{0.6}{
+\begin{tikzpicture}[domain=-4:4] 
+    \draw[very thin,color=gray] (-3.9,-3.9) grid (3.9,3.9);
+    \draw[<->] (-4.2,0) -- (4.2,0);
+    \draw[<->] (0,-4.2) -- (0,4.2); 
+    \draw[color=OliveGreen,domain=-3.9:3.9,smooth,variable=\x]   	plot (\x,{-0.2*\x})             node[right] {$E(\lambda_1)$}; 
+    \draw[color=blue,domain=-3.9:3.9,smooth,variable=\x]    			plot (\x,{0.4*\x})             	node[right] {$E(\lambda_2)$}; 
+	\draw[color=red,domain=-1:1,smooth,variable=\x]    				plot (\x,{4*\x})             	node[right] {$\notin E(\lambda_1), \notin E(\lambda_2)$}; 
+    \end{tikzpicture}
+}
+\end{figure}
+
+Natürlich kann es vorkommen, dass für eine Matrix $A$ zufällig beide Eigenräume schon orthogonal sind. Dann existiert natürlich auch eine ONB aus Eigenvektoren, da dann auch bei \textsc{Gram-Schmidt} keine \enquote{neuen} Vektoren auftauchen / nichts mehr passiert.
+\begin{figure}[H]
+\centering
+\scalebox{0.6}{
+\begin{tikzpicture}[domain=-4:4] 
+    \draw[very thin,color=gray] (-3.9,-3.9) grid (3.9,3.9);
+    \draw[<->] (-4.2,0) -- (4.2,0);
+    \draw[<->] (0,-4.2) -- (0,4.2); 
+    \draw[color=WildStrawberry,domain=-1.4:1.4,smooth,variable=\x]   	plot (\x,{3*\x})             node[right] {$E(\lambda_1)$}; 
+    \draw[color=BurntOrange,domain=-3.9:3.9,smooth,variable=\x]    		plot (\x,{-0.3333*\x})             	node[right] {$E(\lambda_2)$}; 
+\end{tikzpicture}
+}
+\end{figure}
+
+Das ist mit dem \enquote{i.A. kann keine ONB [aus EV] gefunden werden} in der Musterlösung gemeint. Das soll an dieser Stelle ausreichen, ihr könnt gerne im Tutorium nachfragen.
+
+\item Wenn eine Matrix die Eigenwerte $\lambda_1 = 1$, $\lambda_2 = 1$ und $\lambda_3 = 2$ hat, dann reicht es natürlich aus, nur für die Eigenwerte $\lambda_{1,2}$ und $\lambda_3$ die Eigenräume zu bestimmen (zwei Eigenraum-Bestimmungen).
+
+\item Nicht so oft geübt, solltet ihr aber trotzdem können: \textbf{Eigenwerte sehen!} (TB 12, A2, c) –- Matrix $C \in \R^{5 \times 5}$). Für eine $5 \times 5$-Matrix möchte man nicht das charakteristische Polynom ausrechnen! Für die Rechnungen siehe Musterlösung. Die Idee ist, sich zu fragen, wie oft man auf der Hauptdiagonalen $1$ abziehen muss, um linear abhängige Zeilen zu erzeugen (sei das Ergebnis dieser Überlegungen / Berechnungen mit $D$ bezeichnet). Das \enquote{wie oft} ist der Eigenwert, und dass \enquote{auf der Hauptdiagonalen abziehen} das $- \lambda E$ in der Berechnung der Eigenraumberechnung (sprich $\text{kern}(A-\lambda E)$ wie man es kennt).
+
+Es ist dann das LGS
+\begin{align*}
+Dx = (A - \lambda E)x = 0_{\R^n}
+\end{align*}
+zu lösen. Das Ergebnis ist der Eigenraum, der auch die Eigenvektoren liefert.
+
+Ansätze mit der Spur von $A$ lassen dann meist auf die anderen Eigenwerte schließen.
+
+\item LGS solltet ihr auch in den komplexen Zahlen lösen können. Das braucht ihr, wenn z.\,B. plötzlich komplexe Eigenwerte auftreten und ihr den Eigenraum bestimmen sollt.
 \end{itemize}
 
 
