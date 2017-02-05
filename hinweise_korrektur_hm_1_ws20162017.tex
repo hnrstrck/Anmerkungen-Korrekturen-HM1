@@ -1200,7 +1200,6 @@ und da $\det A$ im Nenner steht, existiert $A^{-1}$ nur, wenn $\det A \neq 0$ is
 
 
 \newpage
-
 \section*{Blatt 12}
 
 \begin{mdframed}[linecolor=red]
@@ -1324,6 +1323,85 @@ zu lösen. Das Ergebnis ist der Eigenraum, der auch die Eigenvektoren liefert.
 Ansätze mit der Spur von $A$ lassen dann meist auf die anderen Eigenwerte schließen.
 
 \item LGS solltet ihr auch in den komplexen Zahlen lösen können. Das braucht ihr, wenn z.\,B. plötzlich komplexe Eigenwerte auftreten und ihr den Eigenraum bestimmen sollt.
+\end{itemize}
+
+
+
+
+
+
+
+\newpage
+\section*{Blatt 13}
+\begin{itemize}
+\item Alle Grenzwerte beziehen sich auf den Fall
+\begin{align*}
+n \longrightarrow \infty.
+\end{align*}
+
+
+
+\item Ihr müsst \enquote{alle $n$ gleichzeitig} gegen unendlich laufen lassen.
+
+Das hier ist \textbf{falsch}:
+\begin{align*}
+\left(1 + \frac{1}{n}\right)^n \longrightarrow (1 + 0)^n = 1^n \longrightarrow 1.
+\end{align*}
+
+Es gilt ja bekanntermaßen
+\begin{align*}
+\left(1 + \frac{1}{n}\right)^n \longrightarrow e \neq 1.
+\end{align*}
+
+Dies kann zu 
+\begin{align*}
+\left(1 + \frac{x}{n}\right)^n \longrightarrow e^x
+\end{align*}
+verallgemmeinert werden.
+
+Es gibt zwei Möglichkeiten, den Grenzwert von bspw.
+\begin{align*}
+\left(1 + \frac{3}{n}\right)^{4n}
+\end{align*}
+auszurechnen.
+
+\begin{itemize}
+\item \emph{Möglichkeit 1}
+
+Mit den Potenzgesetzen gilt:
+
+\begin{align*}
+\left(1 + \frac{3}{n}\right)^{4n} = \left(\left(1 + \frac{3}{n}\right)^{n}\right)^4 \longrightarrow \left(e^{3}\right)^4 = e^{12}.
+\end{align*}
+
+\item \emph{Möglichkeit 2}
+
+Es gilt
+\begin{align*}
+\left(1 + \frac{3}{n}\right)^{4n} = \left(1 + \frac{4\cdot 3}{4\cdot n}\right)^{4n} = \left(1 + \frac{12}{4n}\right)^{4n} \longrightarrow e^{12},
+\end{align*}
+da für eine konvergente Folge auch jede Teilfolge gegen denselben Grenzwert konvergiert. Das \enquote{$4n$} beschreibt diese Teilfolge.
+\end{itemize}
+
+\item Vorsicht! In der Regel gilt
+\begin{align*}
+0 \cdot \infty \neq 0.
+\end{align*}
+
+Dies gilt auch für Grenzwerte.
+\begin{align*}
+4\cdot\frac{1}{n}\cdot n \longrightarrow 4,
+\end{align*}
+obwohl 
+\begin{align*}
+\frac{1}{n} \longrightarrow 0,
+\end{align*}
+und 
+\begin{align*}
+n \longrightarrow \infty,
+\end{align*}
+gilt.
+
 \end{itemize}
 
 
