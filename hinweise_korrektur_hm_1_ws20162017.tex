@@ -1388,7 +1388,7 @@ da für eine konvergente Folge auch jede Teilfolge gegen denselben Grenzwert kon
 0 \cdot \infty \neq 0.
 \end{align*}
 
-Dies gilt auch für Grenzwerte.
+\textbf{Beispiel.} Es gilt
 \begin{align*}
 4\cdot\frac{1}{n}\cdot n \longrightarrow 4,
 \end{align*}
@@ -1398,10 +1398,54 @@ obwohl
 \end{align*}
 und 
 \begin{align*}
-n \longrightarrow \infty,
+n \longrightarrow \infty
 \end{align*}
-gilt.
+gilt. 
 
+\textbf{Gegenbeispiel.} Andererseits gilt
+\begin{align*}
+4\cdot\frac{1}{n^2}\cdot n \longrightarrow 0,
+\end{align*}
+\enquote{obwohl} 
+\begin{align*}
+\frac{1}{n^2} \longrightarrow 0,
+\end{align*}
+und 
+\begin{align*}
+n \longrightarrow \infty
+\end{align*}
+gilt. Man kann also keine generelle Aussage treffen.
+
+
+Andere Fälle, die in dieselbe Richtung gehen, lauten
+\begin{align*}
+\infty - \infty \neq 0
+\end{align*}
+oder
+\begin{align*}
+\frac{\infty}{\infty} \neq 1.
+\end{align*}
+
+Man überlegt sich leicht ähnliche Beispiele, die die Ungleichungen zeigen oder widerlegen.
+
+\item Sofern bei Wurzeln Folgen im Radikaten stehen, ist der Grenzwert mit dem Einschachtelungssatz wie im Tutorium zu zeigen. Den Zusammenhang
+\begin{align*}
+\lim_{n \rightarrow \infty} \sqrt{a_n} = \sqrt{\lim_{n \rightarrow \infty} a_n}
+\end{align*}
+lernen wir erst später kennen (dieser darf nicht in der HM\RM{1}-Klausur benutzt werden). Dafür braucht man die Stetigkeit der Wurzelfunktion, die Stoff in der HM\RM{2} ist.
+
+\item Beim Monotoniekriterium geht es nur darum, \emph{ob} eine Folge konvergent ist. Es wird keine Aussage darüber gemacht, was der Grenzwert ist.
+
+Vergleichbar: \enquote{Ist die Matrix $A$ invertierbar?} im Gegensatz zu \enquote{Wie lautet die Inverse von $A$?}.
+
+\item Immer dran denken, wenn ihr Kandidaten für Grenzwerte von (rekursiven) Folgen bestimmt: Eine Folge hat immer nur genau einen Grenzwert (sofern die Folge konvergent ist).
+
+\item Folgen die für $n \rightarrow \infty$ gegen $\pm \infty$ gehen, sind divergent. Die Aussage \enquote{Die Folge konvergiert gegen $\infty$} ist falsch, auch wenn man dies ab und an mal so sagt. Genaugenommen müsste es \enquote{Die Folge divergiert gegen $\infty$} heißen. 
+
+\item Es gilt natürlich 
+\begin{align*}
+\pm\infty \notin \R, \C
+\end{align*}
 \end{itemize}
 
 
